@@ -1,0 +1,93 @@
+﻿<UserControl x:Class="Material.Views.CategoryDialog"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:main="clr-namespace:Material"
+             xmlns:local="clr-namespace:Material.Views"
+            xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             xmlns:components="clr-namespace:Material.Components"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="500" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" MinWidth="500" MaxWidth="500">
+    <UserControl.Resources>
+        <SolidColorBrush x:Key="ErrorColor" Color="{StaticResource RedPrimary500}" />
+    </UserControl.Resources>
+    <Grid Margin="0" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <DockPanel HorizontalAlignment="Stretch" Background="GhostWhite" Margin="0,0,0,10" Height="60">
+            <TextBlock Margin="10,0,0,0" DockPanel.Dock="Left" VerticalAlignment="Center" HorizontalAlignment="Left">
+                <TextBlock.Style>
+                    <Style TargetType="TextBlock" BasedOn="{StaticResource MaterialDesignTitleTextBlock}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Mode}" Value="Add">
+                                <Setter Property="Text" Value="Добавление категории"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Mode}" Value="Change">
+                                <Setter Property="Text" Value="Изменение категории"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+            <Button Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" DockPanel.Dock="Right" VerticalAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,0,10,0" Width="30" Height="30" Padding="0">
+                <Button.Style>
+                    <Style TargetType="Button" BasedOn="{StaticResource MaterialDesignFlatButton}">
+                        <Setter Property="Border.CornerRadius" Value="50"/>
+                        <Setter Property="Foreground" Value="DimGray"/>
+                    </Style>
+                </Button.Style>
+                <materialDesign:PackIcon Kind="Close" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            </Button>
+        </DockPanel>
+
+        <StackPanel Grid.Row="1" Margin="15,15,15,15" DataContext="{Binding Category}">
+            <TextBlock Text="Имя" />
+            <TextBox Text="{Binding Name}" />
+            <TextBlock Text="Тип" />
+            <ComboBox 
+                ItemsSource="{Binding Path=Type, Converter={main:EnumToCollectionConverter}, Mode=OneTime}"
+                SelectedValuePath="Key"
+                DisplayMemberPath="Value"
+                SelectedValue="{Binding Path=Type}" Margin="0,0,0,10"
+            />
+            <dragablz:TabablzControl Height="235">
+                <dragablz:TabablzControl.InterTabController>
+                    <dragablz:InterTabController Height="235"/>
+                </dragablz:TabablzControl.InterTabController>
+                <TabItem Header="Иконка" Height="235" MaxHeight="235">
+                    <components:CategoryIconSelector DataContext="{Binding}"/>
+                </TabItem>
+                <TabItem Header="Цвет" Height="235" MaxHeight="235">
+                    <components:CategoryColorSelector DataContext="{Binding}"/>
+                </TabItem>
+            </dragablz:TabablzControl>
+        </StackPanel>
+
+        <DockPanel Grid.ColumnSpan="3" Grid.Row="2" HorizontalAlignment="Stretch" Background="GhostWhite" Margin="0,10,0,0" Height="60">
+            <Button Margin="0,0,10,0" DockPanel.Dock="Right" BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueMidBrush}" Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" HorizontalAlignment="Right" MinWidth="100">
+                <Button.CommandParameter>
+                    <system:Boolean>True</system:Boolean>
+                </Button.CommandParameter>
+                <Button.Style>
+                    <Style TargetType="Button" BasedOn="{StaticResource MaterialDesignFlatButton}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Mode}" Value="Add">
+                                <Setter Property="Content" Value="Добавить"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Mode}" Value="Change">
+                                <Setter Property="Content" Value="Изменить"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Button Margin="0,0,10,0"  Content="Отмена" Style="{DynamicResource MaterialDesignFlatButton}" DockPanel.Dock="Right" BorderThickness="1" BorderBrush="{DynamicResource PrimaryHueMidBrush}" Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" HorizontalAlignment="Right" MinWidth="100"/>
+        </DockPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,237 @@
+﻿<UserControl x:Class="Material.Components.CategoryColorSelector"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <x:Array x:Key="AllowedColors" Type="Brush">
+            <SolidColorBrush Color="{StaticResource RedPrimary50}"/>
+            <SolidColorBrush Color="{StaticResource RedPrimary100}"/>
+            <SolidColorBrush Color="{StaticResource RedPrimary200}"/>
+            <SolidColorBrush Color="{StaticResource RedPrimary300}"/>
+            <SolidColorBrush Color="{StaticResource RedPrimary400}"/>
+            <SolidColorBrush Color="{StaticResource RedPrimary500}"/>
+            <SolidColorBrush Color="{StaticResource RedPrimary600}"/>
+            <SolidColorBrush Color="{StaticResource RedPrimary700}"/>
+            <SolidColorBrush Color="{StaticResource RedPrimary800}"/>
+            <SolidColorBrush Color="{StaticResource RedPrimary900}"/>
+            <SolidColorBrush Color="{StaticResource PinkPrimary50}"/>
+            <SolidColorBrush Color="{StaticResource PinkPrimary100}"/>
+            <SolidColorBrush Color="{StaticResource PinkPrimary200}"/>
+            <SolidColorBrush Color="{StaticResource PinkPrimary300}"/>
+            <SolidColorBrush Color="{StaticResource PinkPrimary400}"/>
+            <SolidColorBrush Color="{StaticResource PinkPrimary500}"/>
+            <SolidColorBrush Color="{StaticResource PinkPrimary600}"/>
+            <SolidColorBrush Color="{StaticResource PinkPrimary700}"/>
+            <SolidColorBrush Color="{StaticResource PinkPrimary800}"/>
+            <SolidColorBrush Color="{StaticResource PinkPrimary900}"/>
+            <SolidColorBrush Color="{StaticResource PurplePrimary50}"/>
+            <SolidColorBrush Color="{StaticResource PurplePrimary100}"/>
+            <SolidColorBrush Color="{StaticResource PurplePrimary200}"/>
+            <SolidColorBrush Color="{StaticResource PurplePrimary300}"/>
+            <SolidColorBrush Color="{StaticResource PurplePrimary400}"/>
+            <SolidColorBrush Color="{StaticResource PurplePrimary500}"/>
+            <SolidColorBrush Color="{StaticResource PurplePrimary600}"/>
+            <SolidColorBrush Color="{StaticResource PurplePrimary700}"/>
+            <SolidColorBrush Color="{StaticResource PurplePrimary800}"/>
+            <SolidColorBrush Color="{StaticResource PurplePrimary900}"/>
+            <SolidColorBrush Color="{StaticResource Deep PurplePrimary50}"/>
+            <SolidColorBrush Color="{StaticResource Deep PurplePrimary100}"/>
+            <SolidColorBrush Color="{StaticResource Deep PurplePrimary200}"/>
+            <SolidColorBrush Color="{StaticResource Deep PurplePrimary300}"/>
+            <SolidColorBrush Color="{StaticResource Deep PurplePrimary400}"/>
+            <SolidColorBrush Color="{StaticResource Deep PurplePrimary500}"/>
+            <SolidColorBrush Color="{StaticResource Deep PurplePrimary600}"/>
+            <SolidColorBrush Color="{StaticResource Deep PurplePrimary700}"/>
+            <SolidColorBrush Color="{StaticResource Deep PurplePrimary800}"/>
+            <SolidColorBrush Color="{StaticResource Deep PurplePrimary900}"/>
+            <SolidColorBrush Color="{StaticResource IndigoPrimary50}"/>
+            <SolidColorBrush Color="{StaticResource IndigoPrimary100}"/>
+            <SolidColorBrush Color="{StaticResource IndigoPrimary200}"/>
+            <SolidColorBrush Color="{StaticResource IndigoPrimary300}"/>
+            <SolidColorBrush Color="{StaticResource IndigoPrimary400}"/>
+            <SolidColorBrush Color="{StaticResource IndigoPrimary500}"/>
+            <SolidColorBrush Color="{StaticResource IndigoPrimary600}"/>
+            <SolidColorBrush Color="{StaticResource IndigoPrimary700}"/>
+            <SolidColorBrush Color="{StaticResource IndigoPrimary800}"/>
+            <SolidColorBrush Color="{StaticResource IndigoPrimary900}"/>
+            <SolidColorBrush Color="{StaticResource BluePrimary50}"/>
+            <SolidColorBrush Color="{StaticResource BluePrimary100}"/>
+            <SolidColorBrush Color="{StaticResource BluePrimary200}"/>
+            <SolidColorBrush Color="{StaticResource BluePrimary300}"/>
+            <SolidColorBrush Color="{StaticResource BluePrimary400}"/>
+            <SolidColorBrush Color="{StaticResource BluePrimary500}"/>
+            <SolidColorBrush Color="{StaticResource BluePrimary600}"/>
+            <SolidColorBrush Color="{StaticResource BluePrimary700}"/>
+            <SolidColorBrush Color="{StaticResource BluePrimary800}"/>
+            <SolidColorBrush Color="{StaticResource BluePrimary900}"/>
+            <SolidColorBrush Color="{StaticResource Light BluePrimary50}"/>
+            <SolidColorBrush Color="{StaticResource Light BluePrimary100}"/>
+            <SolidColorBrush Color="{StaticResource Light BluePrimary200}"/>
+            <SolidColorBrush Color="{StaticResource Light BluePrimary300}"/>
+            <SolidColorBrush Color="{StaticResource Light BluePrimary400}"/>
+            <SolidColorBrush Color="{StaticResource Light BluePrimary500}"/>
+            <SolidColorBrush Color="{StaticResource Light BluePrimary600}"/>
+            <SolidColorBrush Color="{StaticResource Light BluePrimary700}"/>
+            <SolidColorBrush Color="{StaticResource Light BluePrimary800}"/>
+            <SolidColorBrush Color="{StaticResource Light BluePrimary900}"/>
+            <SolidColorBrush Color="{StaticResource CyanPrimary50}"/>
+            <SolidColorBrush Color="{StaticResource CyanPrimary100}"/>
+            <SolidColorBrush Color="{StaticResource CyanPrimary200}"/>
+            <SolidColorBrush Color="{StaticResource CyanPrimary300}"/>
+            <SolidColorBrush Color="{StaticResource CyanPrimary400}"/>
+            <SolidColorBrush Color="{StaticResource CyanPrimary500}"/>
+            <SolidColorBrush Color="{StaticResource CyanPrimary600}"/>
+            <SolidColorBrush Color="{StaticResource CyanPrimary700}"/>
+            <SolidColorBrush Color="{StaticResource CyanPrimary800}"/>
+            <SolidColorBrush Color="{StaticResource CyanPrimary900}"/>
+            <SolidColorBrush Color="{StaticResource TealPrimary50}"/>
+            <SolidColorBrush Color="{StaticResource TealPrimary100}"/>
+            <SolidColorBrush Color="{StaticResource TealPrimary200}"/>
+            <SolidColorBrush Color="{StaticResource TealPrimary300}"/>
+            <SolidColorBrush Color="{StaticResource TealPrimary400}"/>
+            <SolidColorBrush Color="{StaticResource TealPrimary500}"/>
+            <SolidColorBrush Color="{StaticResource TealPrimary600}"/>
+            <SolidColorBrush Color="{StaticResource TealPrimary700}"/>
+            <SolidColorBrush Color="{StaticResource TealPrimary800}"/>
+            <SolidColorBrush Color="{StaticResource TealPrimary900}"/>
+            <SolidColorBrush Color="{StaticResource GreenPrimary50}"/>
+            <SolidColorBrush Color="{StaticResource GreenPrimary100}"/>
+            <SolidColorBrush Color="{StaticResource GreenPrimary200}"/>
+            <SolidColorBrush Color="{StaticResource GreenPrimary300}"/>
+            <SolidColorBrush Color="{StaticResource GreenPrimary400}"/>
+            <SolidColorBrush Color="{StaticResource GreenPrimary500}"/>
+            <SolidColorBrush Color="{StaticResource GreenPrimary600}"/>
+            <SolidColorBrush Color="{StaticResource GreenPrimary700}"/>
+            <SolidColorBrush Color="{StaticResource GreenPrimary800}"/>
+            <SolidColorBrush Color="{StaticResource GreenPrimary900}"/>
+            <SolidColorBrush Color="{StaticResource Light GreenPrimary50}"/>
+            <SolidColorBrush Color="{StaticResource Light GreenPrimary100}"/>
+            <SolidColorBrush Color="{StaticResource Light GreenPrimary200}"/>
+            <SolidColorBrush Color="{StaticResource Light GreenPrimary300}"/>
+            <SolidColorBrush Color="{StaticResource Light GreenPrimary400}"/>
+            <SolidColorBrush Color="{StaticResource Light GreenPrimary500}"/>
+            <SolidColorBrush Color="{StaticResource Light GreenPrimary600}"/>
+            <SolidColorBrush Color="{StaticResource Light GreenPrimary700}"/>
+            <SolidColorBrush Color="{StaticResource Light GreenPrimary800}"/>
+            <SolidColorBrush Color="{StaticResource Light GreenPrimary900}"/>
+            <SolidColorBrush Color="{StaticResource LimePrimary50}"/>
+            <SolidColorBrush Color="{StaticResource LimePrimary100}"/>
+            <SolidColorBrush Color="{StaticResource LimePrimary200}"/>
+            <SolidColorBrush Color="{StaticResource LimePrimary300}"/>
+            <SolidColorBrush Color="{StaticResource LimePrimary400}"/>
+            <SolidColorBrush Color="{StaticResource LimePrimary500}"/>
+            <SolidColorBrush Color="{StaticResource LimePrimary600}"/>
+            <SolidColorBrush Color="{StaticResource LimePrimary700}"/>
+            <SolidColorBrush Color="{StaticResource LimePrimary800}"/>
+            <SolidColorBrush Color="{StaticResource LimePrimary900}"/>
+            <SolidColorBrush Color="{StaticResource YellowPrimary50}"/>
+            <SolidColorBrush Color="{StaticResource YellowPrimary100}"/>
+            <SolidColorBrush Color="{StaticResource YellowPrimary200}"/>
+            <SolidColorBrush Color="{StaticResource YellowPrimary300}"/>
+            <SolidColorBrush Color="{StaticResource YellowPrimary400}"/>
+            <SolidColorBrush Color="{StaticResource YellowPrimary500}"/>
+            <SolidColorBrush Color="{StaticResource YellowPrimary600}"/>
+            <SolidColorBrush Color="{StaticResource YellowPrimary700}"/>
+            <SolidColorBrush Color="{StaticResource YellowPrimary800}"/>
+            <SolidColorBrush Color="{StaticResource YellowPrimary900}"/>
+            <SolidColorBrush Color="{StaticResource AmberPrimary50}"/>
+            <SolidColorBrush Color="{StaticResource AmberPrimary100}"/>
+            <SolidColorBrush Color="{StaticResource AmberPrimary200}"/>
+            <SolidColorBrush Color="{StaticResource AmberPrimary300}"/>
+            <SolidColorBrush Color="{StaticResource AmberPrimary400}"/>
+            <SolidColorBrush Color="{StaticResource AmberPrimary500}"/>
+            <SolidColorBrush Color="{StaticResource AmberPrimary600}"/>
+            <SolidColorBrush Color="{StaticResource AmberPrimary700}"/>
+            <SolidColorBrush Color="{StaticResource AmberPrimary800}"/>
+            <SolidColorBrush Color="{StaticResource AmberPrimary900}"/>
+            <SolidColorBrush Color="{StaticResource OrangePrimary50}"/>
+            <SolidColorBrush Color="{StaticResource OrangePrimary100}"/>
+            <SolidColorBrush Color="{StaticResource OrangePrimary200}"/>
+            <SolidColorBrush Color="{StaticResource OrangePrimary300}"/>
+            <SolidColorBrush Color="{StaticResource OrangePrimary400}"/>
+            <SolidColorBrush Color="{StaticResource OrangePrimary500}"/>
+            <SolidColorBrush Color="{StaticResource OrangePrimary600}"/>
+            <SolidColorBrush Color="{StaticResource OrangePrimary700}"/>
+            <SolidColorBrush Color="{StaticResource OrangePrimary800}"/>
+            <SolidColorBrush Color="{StaticResource OrangePrimary900}"/>
+            <SolidColorBrush Color="{StaticResource Deep OrangePrimary50}"/>
+            <SolidColorBrush Color="{StaticResource Deep OrangePrimary100}"/>
+            <SolidColorBrush Color="{StaticResource Deep OrangePrimary200}"/>
+            <SolidColorBrush Color="{StaticResource Deep OrangePrimary300}"/>
+            <SolidColorBrush Color="{StaticResource Deep OrangePrimary400}"/>
+            <SolidColorBrush Color="{StaticResource Deep OrangePrimary500}"/>
+            <SolidColorBrush Color="{StaticResource Deep OrangePrimary600}"/>
+            <SolidColorBrush Color="{StaticResource Deep OrangePrimary700}"/>
+            <SolidColorBrush Color="{StaticResource Deep OrangePrimary800}"/>
+            <SolidColorBrush Color="{StaticResource Deep OrangePrimary900}"/>
+            <SolidColorBrush Color="{StaticResource BrownPrimary50}"/>
+            <SolidColorBrush Color="{StaticResource BrownPrimary100}"/>
+            <SolidColorBrush Color="{StaticResource BrownPrimary200}"/>
+            <SolidColorBrush Color="{StaticResource BrownPrimary300}"/>
+            <SolidColorBrush Color="{StaticResource BrownPrimary400}"/>
+            <SolidColorBrush Color="{StaticResource BrownPrimary500}"/>
+            <SolidColorBrush Color="{StaticResource BrownPrimary600}"/>
+            <SolidColorBrush Color="{StaticResource BrownPrimary700}"/>
+            <SolidColorBrush Color="{StaticResource BrownPrimary800}"/>
+            <SolidColorBrush Color="{StaticResource BrownPrimary900}"/>
+            <SolidColorBrush Color="{StaticResource GreyPrimary50}"/>
+            <SolidColorBrush Color="{StaticResource GreyPrimary100}"/>
+            <SolidColorBrush Color="{StaticResource GreyPrimary200}"/>
+            <SolidColorBrush Color="{StaticResource GreyPrimary300}"/>
+            <SolidColorBrush Color="{StaticResource GreyPrimary400}"/>
+            <SolidColorBrush Color="{StaticResource GreyPrimary500}"/>
+            <SolidColorBrush Color="{StaticResource GreyPrimary600}"/>
+            <SolidColorBrush Color="{StaticResource GreyPrimary700}"/>
+            <SolidColorBrush Color="{StaticResource GreyPrimary800}"/>
+            <SolidColorBrush Color="{StaticResource GreyPrimary900}"/>
+            <SolidColorBrush Color="{StaticResource Blue GreyPrimary50}"/>
+            <SolidColorBrush Color="{StaticResource Blue GreyPrimary100}"/>
+            <SolidColorBrush Color="{StaticResource Blue GreyPrimary200}"/>
+            <SolidColorBrush Color="{StaticResource Blue GreyPrimary300}"/>
+            <SolidColorBrush Color="{StaticResource Blue GreyPrimary400}"/>
+            <SolidColorBrush Color="{StaticResource Blue GreyPrimary500}"/>
+            <SolidColorBrush Color="{StaticResource Blue GreyPrimary600}"/>
+            <SolidColorBrush Color="{StaticResource Blue GreyPrimary700}"/>
+            <SolidColorBrush Color="{StaticResource Blue GreyPrimary800}"/>
+            <SolidColorBrush Color="{StaticResource Blue GreyPrimary900}"/>
+        </x:Array>
+        <DataTemplate x:Key="ColorItem">
+            <Border x:Name="ColorBorder" BorderThickness="1" Background="{Binding}" Margin="3" CornerRadius="50" Padding="2" Width="30" Height="30">
+                <Border.Style>
+                    <Style TargetType="Border">
+                        <Style.Setters>
+                            <Setter Property="BorderBrush" Value="#FFD7D7D7"/>
+                        </Style.Setters>
+                    </Style>
+                </Border.Style>
+            </Border>
+            <DataTemplate.Triggers>
+                <DataTrigger Binding="{Binding Path=IsSelected, RelativeSource={RelativeSource AncestorType=ListBoxItem}}" Value="False">
+                    <Setter TargetName="ColorBorder" Property="BorderBrush" Value="#FFEDEDED"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Path=IsSelected, RelativeSource={RelativeSource AncestorType=ListBoxItem}}" Value="True">
+                    <Setter TargetName="ColorBorder" Property="BorderBrush" Value="{StaticResource PrimaryHueMidBrush}"/>
+                </DataTrigger>
+            </DataTemplate.Triggers>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid Background="White">
+        <ListBox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SelectedItem="{Binding Path=IconColor}" ItemsSource="{StaticResource AllowedColors}" ItemTemplate="{StaticResource ColorItem}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem" BasedOn="{StaticResource MaterialDesignToolToggleListBoxItem}">
+                    <Style.Setters>
+                        <Setter Property="Padding" Value="0"/>
+                    </Style.Setters>
+                </Style>
+            </ListBox.ItemContainerStyle>
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
+    </Grid>
+</UserControl>

@@ -1,0 +1,151 @@
+﻿<simple:NavigationWindow
+        xmlns:simple="clr-namespace:SimpleWPF.Navigation;assembly=SimpleWPF" x:Class="Material.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Material"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto" 
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Window.Resources>
+        <ResourceDictionary>
+            <Storyboard x:Key="OpenMenu">
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Width" Storyboard.Target="{Binding ElementName=MenuGrid}">
+                    <EasingDoubleKeyFrame KeyTime="0" Value="50"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="200"/>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Height" Storyboard.Target="{Binding ElementName=MenuLogo}">
+                    <EasingDoubleKeyFrame KeyTime="0" Value="27"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="100"/>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+            <Storyboard x:Key="CloseMenu">
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Width" Storyboard.Target="{Binding ElementName=MenuGrid}">
+                    <EasingDoubleKeyFrame KeyTime="0" Value="200"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="50"/>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Height" Storyboard.Target="{Binding ElementName=MenuLogo}">
+                    <EasingDoubleKeyFrame KeyTime="0" Value="100"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="27"/>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+            <Style x:Key="MaterialDesignMenuToggleButton" BasedOn="{StaticResource MaterialDesignHamburgerToggleButton}" TargetType="{x:Type ToggleButton}">
+                <Style.Triggers>
+                    <Trigger Property="IsChecked" Value="true">
+                        <Trigger.EnterActions>
+                            <BeginStoryboard Storyboard="{StaticResource OpenMenu}"/>
+                        </Trigger.EnterActions>
+                        <Trigger.ExitActions>
+                            <BeginStoryboard Storyboard="{StaticResource CloseMenu}"/>
+                        </Trigger.ExitActions>
+                    </Trigger>
+                    <Trigger Property="IsChecked" Value="false">
+                        <Trigger.EnterActions>
+                            <BeginStoryboard Storyboard="{StaticResource CloseMenu}"/>
+                        </Trigger.EnterActions>
+                        <Trigger.ExitActions>
+                            <BeginStoryboard Storyboard="{StaticResource OpenMenu}"/>
+                        </Trigger.ExitActions>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Window.Triggers>
+    </Window.Triggers>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="MenuGrid" Width="200" HorizontalAlignment="Left" Grid.Column="0" Grid.RowSpan="2">
+            <StackPanel Background="{StaticResource MaterialDesignBackground}">
+                <StackPanel Background="{StaticResource PrimaryHueLightBrush}">
+                    <Image ToolTip="Золотой кошелек" x:Name="MenuLogo" Height="100" Margin="5,5,5,2" Source="Resources/Logo.png"/>
+                </StackPanel>
+                <Separator Margin="0,0,0,2"/>
+                <ListView x:Name="Menu" Foreground="#FF313131" ScrollViewer.HorizontalScrollBarVisibility="Hidden" SelectionMode="Single" ItemsSource="{Binding MainMenu}" SelectionChanged="Menu_SelectionChanged">
+                    <ListView.Resources>
+                        <DataTemplate x:Key="MenuTemplate">
+                            <StackPanel Orientation="Horizontal" Margin="10 0">
+                                <materialDesign:PackIcon Kind="{Binding Path=Icon}" Foreground="Gray" Margin="5" VerticalAlignment="Center" Width="20" Height="20"/>
+                                <TextBlock Text="{Binding Path=Caption}" Margin="10" Foreground="Gray"/>
+                            </StackPanel>
+                        </DataTemplate>
+                        <SolidColorBrush Color="{DynamicResource Primary300}" x:Key="LVBackground" />
+                        <SolidColorBrush Color="{DynamicResource Primary500}" x:Key="LVSelected" />
+                        <ResourceDictionary x:Key="ListView" Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ListView.xaml" />
+                    </ListView.Resources>
+                    <ListView.ItemTemplate>
+                        <Binding Source="{StaticResource MenuTemplate}"/>
+                    </ListView.ItemTemplate>
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem" BasedOn="{StaticResource MaterialDesignListBoxItem}">
+                            <Setter Property="Padding" Value="0"/>
+                            <Setter Property="FontSize" Value="18"/>
+                            <Setter Property="Height" Value="45"/>
+                            <Setter Property="ToolTip" Value="{Binding Path=Caption}"/>
+
+                            <Style.Resources>
+                                <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="Transparent" />
+                                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Transparent" />
+                            </Style.Resources>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="{StaticResource LVBackground}" />
+                                </Trigger>
+                                <MultiTrigger>
+                                    <MultiTrigger.Conditions>
+                                        <Condition Property="IsSelected" Value="True" />
+                                        <Condition Property="Selector.IsSelectionActive" Value="False" />
+                                    </MultiTrigger.Conditions>
+                                    <Setter Property="Background" Value="{StaticResource LVSelected}" />
+                                </MultiTrigger>
+                                <MultiTrigger>
+                                    <MultiTrigger.Conditions>
+                                        <Condition Property="IsSelected" Value="True" />
+                                        <Condition Property="Selector.IsSelectionActive" Value="True" />
+                                    </MultiTrigger.Conditions>
+                                    <Setter Property="Background" Value="{StaticResource LVSelected}" />
+                                </MultiTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                </ListView>
+            </StackPanel>
+        </Grid>
+        <materialDesign:ColorZone Grid.Column="1" Padding="5" Mode="PrimaryMid" MouseDown="ColorZone_MouseDown">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <ToggleButton x:Name="ToggleMenuButton" Style="{StaticResource MaterialDesignMenuToggleButton}"
+                                  HorizontalAlignment="Left" Width="24" Height="24" Foreground="Gray"/>
+                <TextBlock Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Text="Золотой кошелек"/>
+                <Button x:Name="CloseAppButton" Padding="0" Margin="0" Grid.Column="2" Width="24" Height="24" Click="CloseAppButton_Click"  Style="{StaticResource MaterialDesignFloatingActionDarkButton}">
+                    <materialDesign:PackIcon Kind="Close"/>
+                </Button>
+            </Grid>
+        </materialDesign:ColorZone>
+
+        <ContentControl Grid.Column="1" Grid.Row="1" Content="{Binding Current}"/>
+        <Border Grid.ColumnSpan="1" MouseDown="ColorZone_MouseDown" Background="Transparent"/>
+    </Grid>
+</simple:NavigationWindow>

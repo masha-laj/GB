@@ -1,0 +1,75 @@
+﻿<UserControl x:Class="Material.Components.CategoryIconSelector"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <x:Array x:Key="AllowedIcons1" Type="materialDesign:PackIconKind">
+            <materialDesign:PackIconKind>Wallet</materialDesign:PackIconKind>
+            <materialDesign:PackIconKind>CreditCard</materialDesign:PackIconKind>
+            <materialDesign:PackIconKind>Account</materialDesign:PackIconKind>
+            <materialDesign:PackIconKind>Basket</materialDesign:PackIconKind>
+            <materialDesign:PackIconKind>Restaurant</materialDesign:PackIconKind>
+            <materialDesign:PackIconKind>Filmstrip</materialDesign:PackIconKind>
+            <materialDesign:PackIconKind>Car</materialDesign:PackIconKind>
+            <materialDesign:PackIconKind>Medicine</materialDesign:PackIconKind>
+            <materialDesign:PackIconKind>Gift</materialDesign:PackIconKind>
+            <materialDesign:PackIconKind>Face</materialDesign:PackIconKind>
+            <materialDesign:PackIconKind>Shopping</materialDesign:PackIconKind>
+        </x:Array>
+        <x:Array x:Key="AllowedIcons" Type="materialDesign:PackIconKind">
+            <materialDesign:PackIconKind>Wallet</materialDesign:PackIconKind>
+            <materialDesign:PackIconKind>CreditCard</materialDesign:PackIconKind>
+            <materialDesign:PackIconKind>Account</materialDesign:PackIconKind>
+            <materialDesign:PackIconKind>Basket</materialDesign:PackIconKind>
+            <materialDesign:PackIconKind>Restaurant</materialDesign:PackIconKind>
+            <materialDesign:PackIconKind>Filmstrip</materialDesign:PackIconKind>
+            <materialDesign:PackIconKind>Car</materialDesign:PackIconKind>
+            <materialDesign:PackIconKind>Medicine</materialDesign:PackIconKind>
+            <materialDesign:PackIconKind>Gift</materialDesign:PackIconKind>
+            <materialDesign:PackIconKind>Face</materialDesign:PackIconKind>
+            <materialDesign:PackIconKind>Shopping</materialDesign:PackIconKind>
+        </x:Array>
+        <DataTemplate x:Key="IconItem">
+            <Border x:Name="IconBorder" BorderThickness="1" Margin="3" CornerRadius="50" Padding="2" Width="30" Height="30">
+                <Border.Style>
+                    <Style TargetType="Border">
+                        <Style.Setters>
+                            <Setter Property="BorderBrush" Value="#FFD7D7D7"/>
+                        </Style.Setters>
+                    </Style>
+                </Border.Style>
+                <materialDesign:PackIcon x:Name="Icon" Kind="{Binding}" Width="15" Height="15" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+            <DataTemplate.Triggers>
+                <DataTrigger Binding="{Binding Path=IsSelected, RelativeSource={RelativeSource AncestorType=ListBoxItem}}" Value="False">
+                    <Setter TargetName="Icon" Property="materialDesign:PackIcon.Foreground" Value="#FF2D2D2D"/>
+                    <Setter TargetName="IconBorder" Property="materialDesign:PackIcon.Background" Value="#FFEDEDED"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Path=IsSelected, RelativeSource={RelativeSource AncestorType=ListBoxItem}}" Value="True">
+                    <Setter TargetName="Icon" Property="materialDesign:PackIcon.Foreground" Value="White"/>
+                    <Setter TargetName="IconBorder" Property="materialDesign:PackIcon.Background" Value="{StaticResource PrimaryHueMidBrush}"/>
+                </DataTrigger>
+            </DataTemplate.Triggers>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid Background="White">
+        <ListBox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SelectedItem="{Binding Path=Icon}" ItemsSource="{StaticResource AllowedIcons}" ItemTemplate="{StaticResource IconItem}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem" BasedOn="{StaticResource MaterialDesignToolToggleListBoxItem}">
+                    <Style.Setters>
+                        <Setter Property="Padding" Value="0"/>
+                    </Style.Setters>
+                </Style>
+            </ListBox.ItemContainerStyle>
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
+    </Grid>
+</UserControl>

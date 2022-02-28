@@ -1,0 +1,3171 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MaterialDesignExtensions</name>
+    </assembly>
+    <members>
+        <member name="E:MaterialDesignExtensions.Controllers.AutocompleteController.AutocompleteItemsChanged">
+            <summary>
+            An event raised to return the result of the autocomplete.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controllers.AutocompleteController.AutocompleteSource">
+            <summary>
+            The source providing the autocomplete items.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controllers.AutocompleteController.#ctor">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controllers.AutocompleteController" />.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controllers.AutocompleteController.Search(System.String)">
+            <summary>
+            Starts a new task for the autocomplete and propagates the result via the <see cref="!:AutocompleteChanged" /> event.
+            This method does some technical stuff and delegates the actual search to the <see cref="T:MaterialDesignExtensions.Model.IAutocompleteSource" />.
+            </summary>
+            <param name="searchTerm">The term to search for</param>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controllers.AutocompleteItemsChangedEventArgs">
+            <summary>
+            The arguments for the <see cref="E:MaterialDesignExtensions.Controllers.AutocompleteController.AutocompleteItemsChanged" /> event.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controllers.AutocompleteItemsChangedEventArgs.Items">
+            <summary>
+            The result of the autocomplete.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controllers.AutocompleteItemsChangedEventArgs.#ctor(System.Collections.IEnumerable)">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controllers.AutocompleteItemsChangedEventArgs" />.
+            </summary>
+            <param name="items">The result of the autocomplete</param>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controllers.AutocompleteItemsChangedEventHandler">
+            <summary>
+            The delegate for handling the <see cref="E:MaterialDesignExtensions.Controllers.AutocompleteController.AutocompleteItemsChanged" /> event.
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controllers.BitmapImageHelper">
+            <summary>
+            Helper class to load images.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controllers.BitmapImageHelper.LoadImage(System.String,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Loads the image from the file with the specified width and height keeping its ratio.
+            </summary>
+            <param name="imageFilename"></param>
+            <param name="targetWidth"></param>
+            <param name="targetHeight"></param>
+            <param name="useCache"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controllers.FileSystemController">
+            <summary>
+            Controller behind the <see cref="T:MaterialDesignExtensions.Controls.OpenDirectoryControl" />, <see cref="T:MaterialDesignExtensions.Controls.OpenFileControl" /> and <see cref="T:MaterialDesignExtensions.Controls.SaveFileControl" />.
+            </summary>
+        </member>
+        <member name="E:MaterialDesignExtensions.Controllers.FileSystemController.PropertyChanged">
+            <summary>
+            The property changed event.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controllers.FileSystemController.CurrentDirectory">
+            <summary>
+            The current directory shown in the control.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controllers.FileSystemController.CurrentDirectoryPathParts">
+            <summary>
+            The list of sub directories to <see cref="P:MaterialDesignExtensions.Controllers.FileSystemController.CurrentDirectory" />.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controllers.FileSystemController.CurrentFile">
+            <summary>
+            The selected file of the control.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controllers.FileSystemController.CurrentFileFullName">
+            <summary>
+            The full filename (full path and name) of the selected file of the control.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controllers.FileSystemController.Directories">
+            <summary>
+            The directories inside <see cref="P:MaterialDesignExtensions.Controllers.FileSystemController.CurrentDirectory" />.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controllers.FileSystemController.DirectoriesAndFiles">
+            <summary>
+            The directories and files inside <see cref="P:MaterialDesignExtensions.Controllers.FileSystemController.CurrentDirectory" />.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controllers.FileSystemController.Drives">
+            <summary>
+            The system's drives.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controllers.FileSystemController.Files">
+            <summary>
+            The files inside <see cref="P:MaterialDesignExtensions.Controllers.FileSystemController.CurrentDirectory" />.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controllers.FileSystemController.FileFilters">
+            <summary>
+            The possible file filters to select from for applying to the files inside the current directory.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controllers.FileSystemController.FileFilterToApply">
+            <summary>
+            The file filter to apply to the files inside the current directory.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controllers.FileSystemController.SpecialDirectories">
+            <summary>
+            The special directories (e.g. music directory) of the user.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controllers.FileSystemController.ShowHiddenFilesAndDirectories">
+            <summary>
+            Specifies whether hidden files and directories will be shown or not.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controllers.FileSystemController.ShowSystemFilesAndDirectories">
+            <summary>
+            Specifies whether protected system files and directories will be shown or not.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controllers.FileSystemController.#ctor">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controllers.FileSystemController" />.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controllers.FileSystemController.SelectDirectory(System.String)">
+            <summary>
+            Selects a new current directory.
+            </summary>
+            <param name="directory"></param>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controllers.FileSystemController.SelectDirectory(System.IO.DirectoryInfo)">
+            <summary>
+            Selects a new current directory.
+            </summary>
+            <param name="directory"></param>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controllers.FileSystemController.SelectFile(System.String)">
+            <summary>
+            Selects a file.
+            </summary>
+            <param name="file"></param>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controllers.FileSystemController.SelectFile(System.IO.FileInfo)">
+            <summary>
+            Selects a file.
+            </summary>
+            <param name="file"></param>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controllers.FileSystemController.SetShowHiddenFilesAndDirectories(System.Boolean)">
+            <summary>
+            Setter intended for internal use.
+            </summary>
+            <param name="showHiddenFilesAndDirectories"></param>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controllers.FileSystemController.SetShowSystemFilesAndDirectories(System.Boolean)">
+            <summary>
+            Setter intended for internal use.
+            </summary>
+            <param name="showSystemFilesAndDirectories"></param>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controllers.FileSystemController.SetFileFilter(System.Collections.Generic.IList{MaterialDesignExtensions.Model.IFileFilter},MaterialDesignExtensions.Model.IFileFilter)">
+            <summary>
+            Sets a new file filter to apply to the files inside the current directory.
+            </summary>
+            <param name="fileFilters"></param>
+            <param name="fileFilterToApply"></param>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controllers.FileFilterHelper">
+            <summary>
+            Helper class for filtering files in <see cref="T:MaterialDesignExtensions.Controls.OpenFileControl" /> and <see cref="T:MaterialDesignExtensions.Controls.SaveFileControl" />.
+            The string format is similar to the original .NET controls
+            (see https://docs.microsoft.com/de-de/dotnet/api/microsoft.win32.filedialog.filter?view=netframework-4.7.1#Microsoft_Win32_FileDialog_Filter).
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controllers.FileFilterHelper.ParseFileFilters(System.String)">
+            <summary>
+            Parses the file filters out of a string similar to the original .NET API
+            (see https://docs.microsoft.com/de-de/dotnet/api/microsoft.win32.filedialog.filter?view=netframework-4.7.1#Microsoft_Win32_FileDialog_Filter).
+            </summary>
+            <param name="filtersStr">The string containing the filters like: C#|*.cs|Web|*.html;*.css;*.js</param>
+            <returns>A list of the parsed filters or null if the input is empty</returns>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controllers.FileFilterHelper.ParseFileFilter(System.String,System.String)">
+            <summary>
+            Parses a file filter out of a filter portion string similar to the original .NET API
+            (see https://docs.microsoft.com/de-de/dotnet/api/microsoft.win32.filedialog.filter?view=netframework-4.7.1#Microsoft_Win32_FileDialog_Filter).
+            </summary>
+            <param name="label">The label of the filter</param>
+            <param name="filters">The filter portion string like: *.cs;*.xaml</param>
+            <returns></returns>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controllers.FileFilterHelper.ParseFilterRegularExpressions(System.String)">
+            <summary>
+            Creates regular expressions out of a filter portion string.
+            </summary>
+            <param name="filters">The filter portion string like: *.cs;*.xaml</param>
+            <returns></returns>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controllers.FileFilterHelper.ConvertFileFilterToString(MaterialDesignExtensions.Model.IFileFilter)">
+            <summary>
+            Converts a file filter into back into a string according to the original .NET API
+            (see https://docs.microsoft.com/de-de/dotnet/api/microsoft.win32.filedialog.filter?view=netframework-4.7.1#Microsoft_Win32_FileDialog_Filter).
+            </summary>
+            <param name="fileFilter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controllers.FileFilterHelper.ConvertFileFiltersToString(System.Collections.Generic.IEnumerable{MaterialDesignExtensions.Model.IFileFilter})">
+            <summary>
+            Converts the file filters into back into a string according to the original .NET API
+            (see https://docs.microsoft.com/de-de/dotnet/api/microsoft.win32.filedialog.filter?view=netframework-4.7.1#Microsoft_Win32_FileDialog_Filter).
+            </summary>
+            <param name="fileFilters"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controllers.SearchSuggestionsController">
+            <summary>
+            Controller behind the <see cref="T:MaterialDesignExtensions.Controls.PersistentSearch"/> control.
+            It does the technical stuff and delegates the actual search to the specified <see cref="P:MaterialDesignExtensions.Controllers.SearchSuggestionsController.SearchSuggestionsSource" />.
+            </summary>
+        </member>
+        <member name="E:MaterialDesignExtensions.Controllers.SearchSuggestionsController.SearchSuggestionsChanged">
+            <summary>
+            An event raised to return the result of an search.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controllers.SearchSuggestionsController.SearchSuggestionsSource">
+            <summary>
+            The source providing the suggestions to do the actual search with.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controllers.SearchSuggestionsController.#ctor">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controllers.SearchSuggestionsController" />.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controllers.SearchSuggestionsController.Search(System.String)">
+            <summary>
+            Starts a new task for the search and propagates the result via the <see cref="E:MaterialDesignExtensions.Controllers.SearchSuggestionsController.SearchSuggestionsChanged" /> event.
+            This method does some technical stuff and delegates the actual search to the <see cref="T:MaterialDesignExtensions.Model.ISearchSuggestionsSource" />.
+            </summary>
+            <param name="searchTerm">The term to search for</param>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controllers.SearchSuggestionsChangedEventArgs">
+            <summary>
+            The arguments for the <see cref="E:MaterialDesignExtensions.Controllers.SearchSuggestionsController.SearchSuggestionsChanged" /> event.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controllers.SearchSuggestionsChangedEventArgs.SearchSuggestions">
+            <summary>
+            The result of the search.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controllers.SearchSuggestionsChangedEventArgs.IsFromHistory">
+            <summary>
+            Boolean indicating if the result contains suggestions of previous searches or based on the current input.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controllers.SearchSuggestionsChangedEventArgs.#ctor(System.Collections.Generic.IList{System.String},System.Boolean)">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controllers.SearchSuggestionsChangedEventArgs" />.
+            </summary>
+            <param name="searchSuggestions">The result of the search</param>
+            <param name="isFromHistory">Boolean indicating if the result contains suggestions of previous searches or based on the current input</param>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controllers.SearchSuggestionsChangedEventHandler">
+            <summary>
+            The delegate for handling the <see cref="E:MaterialDesignExtensions.Controllers.SearchSuggestionsController.SearchSuggestionsChanged" /> event.
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controllers.StepperController">
+            <summary>
+            Controller which holds the steps and implements the navigation between them.
+            </summary>
+        </member>
+        <member name="E:MaterialDesignExtensions.Controllers.StepperController.PropertyChanged">
+            <summary>
+            The property changed event.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controllers.StepperController.ActiveStep">
+            <summary>
+            Gets the active <see cref="T:MaterialDesignExtensions.Model.IStep"/> or null.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controllers.StepperController.ActiveStepContent">
+            <summary>
+            Gets the content of the active <see cref="T:MaterialDesignExtensions.Model.IStep"/> or null.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controllers.StepperController.ActiveStepViewModel">
+            <summary>
+            Gets the view model of the active <see cref="T:MaterialDesignExtensions.Model.IStep"/> or null.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controllers.StepperController.InternalSteps">
+            <summary>
+            Internal getter for the binding in the XAML of the <see cref="T:MaterialDesignExtensions.Controls.Stepper"/>.
+            It is considered for internal use only.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controllers.StepperController.NextStep">
+            <summary>
+            Gets the next <see cref="T:MaterialDesignExtensions.Model.IStep"/> for the active <see cref="T:MaterialDesignExtensions.Model.IStep"/> in a linear order.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controllers.StepperController.PreviousStep">
+            <summary>
+            Gets the previous <see cref="T:MaterialDesignExtensions.Model.IStep"/> for the active <see cref="T:MaterialDesignExtensions.Model.IStep"/> in a linear order.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controllers.StepperController.Steps">
+            <summary>
+            Gets all the steps of the <see cref="T:MaterialDesignExtensions.Controls.Stepper"/>.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controllers.StepperController.#ctor">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controllers.StepperController" />.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controllers.StepperController.InitSteps(System.Collections.Generic.IEnumerable{MaterialDesignExtensions.Model.IStep})">
+            <summary>
+            Initialises the steps which will be shown inside the <see cref="T:MaterialDesignExtensions.Controls.Stepper"/>.
+            </summary>
+            <param name="steps"></param>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controllers.StepperController.InitSteps(MaterialDesignExtensions.Model.IStep[])">
+            <summary>
+            Initialises the steps which will be shown inside the <see cref="T:MaterialDesignExtensions.Controls.Stepper"/>.
+            Throws an <see cref="T:System.ArgumentNullException"/> if any of the steps is null.
+            </summary>
+            <param name="steps"></param>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controllers.StepperController.Continue">
+            <summary>
+            Goes to the next <see cref="T:MaterialDesignExtensions.Model.IStep"/> if the active <see cref="T:MaterialDesignExtensions.Model.IStep"/> is not the last one.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controllers.StepperController.Back">
+            <summary>
+            Goes to the previous <see cref="T:MaterialDesignExtensions.Model.IStep"/> if the active <see cref="T:MaterialDesignExtensions.Model.IStep"/> is not the first one.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controllers.StepperController.GotoStep(System.Int32)">
+            <summary>
+            Goes to the <see cref="T:MaterialDesignExtensions.Model.IStep"/> specified by the index.
+            </summary>
+            <param name="index"></param>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controllers.StepperController.GotoStep(MaterialDesignExtensions.Model.IStep)">
+            <summary>
+            Goes to the specified <see cref="T:MaterialDesignExtensions.Model.IStep"/>.
+            Throws an <see cref="T:System.ArgumentNullException"/> if step is null or step is not inside the <see cref="T:MaterialDesignExtensions.Controls.Stepper"/>.
+            </summary>
+            <param name="step"></param>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controllers.StepperController.GotoStep(MaterialDesignExtensions.Model.StepperStepViewModel)">
+            <summary>
+            Goes to the specified <see cref="T:MaterialDesignExtensions.Model.StepperStepViewModel"/>.
+            Throws an <see cref="T:System.ArgumentNullException"/> if stepViewModel is null.
+            </summary>
+            <param name="stepViewModel"></param>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.AppBar">
+            <summary>
+            A custom control implementing the concept of the app bar (https://material.io/design/components/app-bars-top.html#usage).
+            It provides an optional toggle button for a navigation drawer, an icon, a title and a content area (to add toolbar buttons for example).
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBar.DefaultHeight">
+            <summary>
+            The height of a default app bar.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBar.ProminentHeight">
+            <summary>
+            The height of a prominent app bar.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBar.ExtraProminentHeight">
+            <summary>
+            The height of an extra prominent app bar.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBar.DenseHeight">
+            <summary>
+            The height of a dense app bar.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBar.DenseProminentHeight">
+            <summary>
+            The height of a dense prominent app bar.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBar.DenseExtraProminentHeight">
+            <summary>
+            The height of a dense extra prominent app bar.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBar.MediumHeight">
+            <summary>
+            The height of a medium app bar.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBar.MediumProminentHeight">
+            <summary>
+            The height of a medium prominent app bar.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBar.MediumExtraProminentHeight">
+            <summary>
+            The height of a dense medium prominent app bar.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBar.BackEvent">
+            <summary>
+            An event raised by clicking the back button.
+            </summary>
+        </member>
+        <member name="E:MaterialDesignExtensions.Controls.AppBar.Back">
+            <summary>
+            An event raised by clicking the back button.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBar.AppIconProperty">
+            <summary>
+            The icon to show in the upper left corner.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.AppBar.AppIcon">
+            <summary>
+            The icon to show in the upper left corner.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBar.BackCommandProperty">
+            <summary>
+            An command called by clicking the back button.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.AppBar.BackCommand">
+            <summary>
+            An command called by clicking the back button.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBar.ChildrenProperty">
+            <summary>
+            The items for the content area (toolbar buttons for example).
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.AppBar.Children">
+            <summary>
+            The items for the content area (toolbar buttons for example).
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBar.IsNavigationDrawerOpenProperty">
+            <summary>
+            The state of the navigation drawer button: true = drawer open, false = drawer closed.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.AppBar.IsNavigationDrawerOpen">
+            <summary>
+            The state of the navigation drawer button: true = drawer open, false = drawer closed.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBar.OpaqueModeProperty">
+            <summary>
+            The opaque mode of the <see cref="T:MaterialDesignExtensions.Controls.AppBar" />: opaque or transparent.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.AppBar.OpaqueMode">
+            <summary>
+            The opaque mode of the <see cref="T:MaterialDesignExtensions.Controls.AppBar" />: opaque or transparent.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBar.ShowBackButtonProperty">
+            <summary>
+            Shows or hides the back button on the upper left corner.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.AppBar.ShowBackButton">
+            <summary>
+            Shows or hides the back button on the upper left corner.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBar.ShowNavigationDrawerButtonProperty">
+            <summary>
+            Shows or hides the toggle button to open the navigation drawer.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.AppBar.ShowNavigationDrawerButton">
+            <summary>
+            Shows or hides the toggle button to open the navigation drawer.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBar.ShowShadowProperty">
+            <summary>
+            Shows or hides the shadow of the <see cref="T:MaterialDesignExtensions.Controls.AppBar" />.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.AppBar.ShowShadow">
+            <summary>
+            Shows or hides the shadow of the <see cref="T:MaterialDesignExtensions.Controls.AppBar" />.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBar.ShowTitleInProminentAreaProperty">
+            <summary>
+            Moves the title into the prominent area (second row).
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.AppBar.ShowTitleInProminentArea">
+            <summary>
+             If true, moves the title into the prominent area (second row).
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBar.TitleProperty">
+            <summary>
+            The content to show in the title area.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.AppBar.Title">
+            <summary>
+            The content to show in the title area.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBar.TypeProperty">
+            <summary>
+            The type of the <see cref="T:MaterialDesignExtensions.Controls.AppBar" />: default, prominent, dense and dense prominent.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.AppBar.Type">
+            <summary>
+            The type of the <see cref="T:MaterialDesignExtensions.Controls.AppBar" />: default, prominent, dense and dense prominent.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.AppBar.#ctor">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.AppBar" />.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.AppBarType">
+            <summary>
+            The type of the <see cref="T:MaterialDesignExtensions.Controls.AppBar" />.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBarType.Default">
+            <summary>
+            <see cref="T:MaterialDesignExtensions.Controls.AppBar" /> with default height.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBarType.Prominent">
+            <summary>
+            <see cref="T:MaterialDesignExtensions.Controls.AppBar" /> with prominent height.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBarType.ExtraProminent">
+            <summary>
+            <see cref="T:MaterialDesignExtensions.Controls.AppBar" /> with extra prominent height.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBarType.Dense">
+            <summary>
+            <see cref="T:MaterialDesignExtensions.Controls.AppBar" /> with dense height.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBarType.DenseProminent">
+            <summary>
+            <see cref="T:MaterialDesignExtensions.Controls.AppBar" /> with dense prominent height.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBarType.DenseExtraProminent">
+            <summary>
+            <see cref="T:MaterialDesignExtensions.Controls.AppBar" /> with dense extra prominent area.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBarType.Medium">
+            <summary>
+            <see cref="T:MaterialDesignExtensions.Controls.AppBar" /> with medium height.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBarType.MediumProminent">
+            <summary>
+            <see cref="T:MaterialDesignExtensions.Controls.AppBar" /> with medium prominent height.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBarType.MediumExtraProminent">
+            <summary>
+            <see cref="T:MaterialDesignExtensions.Controls.AppBar" /> with medium extra prominent height.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.AppBarOpaqueMode">
+            <summary>
+            The opaque mode of the <see cref="T:MaterialDesignExtensions.Controls.AppBar" /> to toggle between opaque and transparent background.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBarOpaqueMode.Opaque">
+            <summary>
+            An opaque <see cref="T:MaterialDesignExtensions.Controls.AppBar" />.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.AppBarOpaqueMode.Transparent">
+            <summary>
+            A transparent <see cref="T:MaterialDesignExtensions.Controls.AppBar" />
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.Autocomplete">
+            <summary>
+            A control for providing arbitrary items for a search string.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Autocomplete.SelectAutocompleteItemCommand">
+            <summary>
+            Internal command used by the XAML template (public to be available in the XAML template). Not intended for external usage.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Autocomplete.SelectedItemChangedEvent">
+            <summary>
+            An event raised by changing the selected item.
+            </summary>
+        </member>
+        <member name="E:MaterialDesignExtensions.Controls.Autocomplete.SelectedItemChanged">
+            <summary>
+            An event raised by changing the selected item.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Autocomplete.ClearIconSizeProperty">
+            <summary>
+            The size of the icon inside the clear button.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.Autocomplete.ClearIconSize">
+            <summary>
+            The size of the icon inside the clear button.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Autocomplete.AutocompleteSourceProperty">
+            <summary>
+            A source for providing the autocomplete items.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.Autocomplete.AutocompleteSource">
+            <summary>
+            A source for providing the autocomplete items.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Autocomplete.HintProperty">
+            <summary>
+            A hint to show inside the empty text box.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.Autocomplete.Hint">
+            <summary>
+            A hint to show inside the empty text box.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Autocomplete.ItemTemplateProperty">
+            <summary>
+            The template for the items.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.Autocomplete.ItemTemplate">
+            <summary>
+            The template for the items.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Autocomplete.SearchOnInitialFocusProperty">
+            <summary>
+            True for triggering a search on the initial focus of the control.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.Autocomplete.SearchOnInitialFocus">
+            <summary>
+            True for triggering a search on the initial focus of the control.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Autocomplete.SearchTermProperty">
+            <summary>
+            The term to search for.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.Autocomplete.SearchTerm">
+            <summary>
+            The term to search for.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Autocomplete.SelectedItemProperty">
+            <summary>
+            The selected autocomplete item.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.Autocomplete.SelectedItem">
+            <summary>
+            The selected autocomplete item.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Autocomplete.SelectedItemChangedCommandProperty">
+            <summary>
+            A command called by changing the selected item.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.Autocomplete.SelectedItemChangedCommand">
+            <summary>
+            A command called by changing the selected item.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Autocomplete.ShowClearButtonOnlyOnSelectedItemProperty">
+            <summary>
+            True (default value) for showing the clear button only if <see cref="P:MaterialDesignExtensions.Controls.Autocomplete.SelectedItem" /> != null.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.Autocomplete.ShowClearButtonOnlyOnSelectedItem">
+            <summary>
+            True (default value) for showing the clear button only if <see cref="P:MaterialDesignExtensions.Controls.Autocomplete.SelectedItem" /> != null.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.Autocomplete.#ctor">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.Autocomplete" />.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.SelectedItemChangedEventArgs">
+            <summary>
+            The argument for the <see cref="E:MaterialDesignExtensions.Controls.Autocomplete.SelectedItemChanged" /> event.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.SelectedItemChangedEventArgs.SelectedItem">
+            <summary>
+            The new selected item.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.SelectedItemChangedEventArgs.#ctor(System.Windows.RoutedEvent,System.Object,System.Object)">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.SelectedItemChangedEventArgs" />.
+            </summary>
+            <param name="routedEvent"></param>
+            <param name="source"></param>
+            <param name="selectedItem"></param>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.SelectedItemChangedEventHandler">
+            <summary>
+            The delegate for handling the <see cref="E:MaterialDesignExtensions.Controls.Autocomplete.SelectedItemChanged" /> event.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.AutocompletePopup.UpdatePosition">
+            <summary>
+            A <code>Popup</code> does not update its location if the <code>PlacementTarget</code> changes its location for any reason.
+            Call this method to ensure that the <code>Popup</code> will appear at the correct location.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.BaseFileControl">
+            <summary>
+            The base control with common logic for <see cref="T:MaterialDesignExtensions.Controls.OpenFileControl" /> and <see cref="T:MaterialDesignExtensions.Controls.SaveFileControl" />.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.BaseFileControl.SelectFileCommand">
+            <summary>
+            Internal command used by the XAML template (public to be available in the XAML template). Not intended for external usage.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.BaseFileControl.FileSelectedEvent">
+            <summary>
+            An event raised by selecting a file.
+            </summary>
+        </member>
+        <member name="E:MaterialDesignExtensions.Controls.BaseFileControl.FileSelected">
+            <summary>
+            An event raised by selecting a file.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.BaseFileControl.ClearCacheOnUnloadProperty">
+            <summary>
+            True, to clear the cache during unloading the control.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.BaseFileControl.ClearCacheOnUnload">
+            <summary>
+            True, to clear the cache during unloading the control.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.BaseFileControl.CurrentFileProperty">
+            <summary>
+            The current file of the control.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.BaseFileControl.CurrentFile">
+            <summary>
+            The current file of the control.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.BaseFileControl.FileSelectedCommandProperty">
+            <summary>
+            An command called by by selecting a file.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.BaseFileControl.FileSelectedCommand">
+            <summary>
+            An command called by by selecting a file.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.BaseFileControl.FiltersProperty">
+            <summary>
+            The possible file filters to select from for applying to the files inside the current directory.
+            Strings according to the original .NET API will be converted automatically
+            (see https://docs.microsoft.com/de-de/dotnet/api/microsoft.win32.filedialog.filter?view=netframework-4.7.1#Microsoft_Win32_FileDialog_Filter).
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.BaseFileControl.Filters">
+            <summary>
+            The possible file filters to select from for applying to the files inside the current directory.
+            Strings according to the original .NET API will be converted automatically
+            (see https://docs.microsoft.com/de-de/dotnet/api/microsoft.win32.filedialog.filter?view=netframework-4.7.1#Microsoft_Win32_FileDialog_Filter).
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.BaseFileControl.FilterIndexProperty">
+            <summary>
+            The index of the file filter to apply to the files inside the current directory.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.BaseFileControl.FilterIndex">
+            <summary>
+            The index of the file filter to apply to the files inside the current directory.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.BaseFileControl.GroupFoldersAndFilesProperty">
+            <summary>
+            Shows folders and files as a group with a header.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.BaseFileControl.GroupFoldersAndFiles">
+            <summary>
+            Shows folders and files as a group with a header.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.FileSelectedEventArgs">
+            <summary>
+            The arguments for the <see cref="E:MaterialDesignExtensions.Controls.BaseFileControl.FileSelected" /> event.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.FileSelectedEventArgs.FileInfo">
+            <summary>
+            The selected file as <see cref="P:MaterialDesignExtensions.Controls.FileSelectedEventArgs.FileInfo" />
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.FileSelectedEventArgs.File">
+            <summary>
+            The selected file as full filename string.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.FileSelectedEventArgs.#ctor(System.Windows.RoutedEvent,System.Object,System.IO.FileInfo)">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.FileSelectedEventArgs" />.
+            </summary>
+            <param name="routedEvent"></param>
+            <param name="source">The source object</param>
+            <param name="fileInfo">The selected file</param>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.FileSelectedEventArgs.#ctor(System.Windows.RoutedEvent,System.Object,System.String)">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.FileSelectedEventArgs" />.
+            </summary>
+            <param name="routedEvent"></param>
+            <param name="source">The source object</param>
+            <param name="file">The full filename of the selected file</param>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.BaseFileDialog">
+            <summary>
+            The base dialog with common logic for <see cref="T:MaterialDesignExtensions.Controls.OpenFileDialog" /> and <see cref="T:MaterialDesignExtensions.Controls.SaveFileDialog" />.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.BaseFileDialog.CurrentFileProperty">
+            <summary>
+            The current file of the dialog.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.BaseFileDialog.CurrentFile">
+            <summary>
+            The current file of the dialog.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.BaseFileDialog.FiltersProperty">
+            <summary>
+            The possible file filters to select from for applying to the files inside the current directory.
+            Strings according to the original .NET API will be converted automatically
+            (see https://docs.microsoft.com/de-de/dotnet/api/microsoft.win32.filedialog.filter?view=netframework-4.7.1#Microsoft_Win32_FileDialog_Filter).
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.BaseFileDialog.Filters">
+            <summary>
+            The possible file filters to select from for applying to the files inside the current directory.
+            Strings according to the original .NET API will be converted automatically
+            (see https://docs.microsoft.com/de-de/dotnet/api/microsoft.win32.filedialog.filter?view=netframework-4.7.1#Microsoft_Win32_FileDialog_Filter).
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.BaseFileDialog.FilterIndexProperty">
+            <summary>
+            The index of the file filter to apply to the files inside the current directory.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.BaseFileDialog.FilterIndex">
+            <summary>
+            The index of the file filter to apply to the files inside the current directory.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.BaseFileDialog.#ctor">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.BaseFileDialog" />.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.FileDialogArguments">
+            <summary>
+            Arguments to initialize a file dialog.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.FileDialogArguments.Filters">
+            <summary>
+            The possible file filters to select from for applying to the files inside the current directory.
+            Strings according to the original .NET API will be converted automatically
+            (see https://docs.microsoft.com/de-de/dotnet/api/microsoft.win32.filedialog.filter?view=netframework-4.7.1#Microsoft_Win32_FileDialog_Filter).
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.FileDialogArguments.FilterIndex">
+            <summary>
+            The index of the file filter to apply to the files inside the current directory.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.FileDialogArguments.#ctor">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.FileDialogArguments" />.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.FileDialogResult">
+            <summary>
+            The base class for the dialog result of <see cref="T:MaterialDesignExtensions.Controls.OpenFileDialog" /> and <see cref="T:MaterialDesignExtensions.Controls.SaveFileDialog" />.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.FileDialogResult.FileInfo">
+            <summary>
+            The selected file as <see cref="P:MaterialDesignExtensions.Controls.FileDialogResult.FileInfo" />.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.FileDialogResult.File">
+            <summary>
+            The selected file as full filename string.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.FileDialogResult.#ctor(System.Boolean,System.IO.FileInfo)">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.FileDialogResult" />.
+            </summary>
+            <param name="canceled">True if the dialog was canceled</param>
+            <param name="fileInfo">The selected file</param>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.ControlWithAutocompletePopup">
+            <summary>
+            A base class to provide common functionality for controls with a <code>Popup</code>.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.ControlWithAutocompletePopup.#ctor">
+            <summary>
+            Creates a new <code>ControlWithPopup</code>.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.ControlWithAutocompletePopup.UpdatePopup">
+            <summary>
+            A <code>Popup</code> does not update its location if the <code>PlacementTarget</code> changes its location for any reason.
+            Call this method to ensure that the <code>Popup</code> will appear at the correct location.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.FileSystemControl">
+            <summary>
+            The base control with common logic for <see cref="T:MaterialDesignExtensions.Controls.OpenDirectoryControl" />, <see cref="T:MaterialDesignExtensions.Controls.OpenFileControl" /> and <see cref="T:MaterialDesignExtensions.Controls.SaveFileControl" />.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.FileSystemControl.OpenSpecialDirectoriesDrawerCommand">
+            <summary>
+            Internal command used by the XAML template (public to be available in the XAML template). Not intended for external usage.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.FileSystemControl.SelectDirectoryItemCommand">
+            <summary>
+            Internal command used by the XAML template (public to be available in the XAML template). Not intended for external usage.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.FileSystemControl.SelectFileSystemEntryCommand">
+            <summary>
+            Internal command used by the XAML template (public to be available in the XAML template). Not intended for external usage.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.FileSystemControl.ShowInfoCommand">
+            <summary>
+            Internal command used by the XAML template (public to be available in the XAML template). Not intended for external usage.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.FileSystemControl.CancelCommand">
+            <summary>
+            Internal command used by the XAML template (public to be available in the XAML template). Not intended for external usage.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.FileSystemControl.CancelEvent">
+            <summary>
+            An event raised by canceling the operation.
+            </summary>
+        </member>
+        <member name="E:MaterialDesignExtensions.Controls.FileSystemControl.Cancel">
+            <summary>
+            An event raised by canceling the operation.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.FileSystemControl.Controller">
+            <summary>
+            The underlying controller for file system logic. This property is intended for internal use only.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.FileSystemControl.CurrentDirectoryProperty">
+            <summary>
+            The current directory of the control.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.FileSystemControl.CurrentDirectory">
+            <summary>
+            The current directory of the control.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.FileSystemControl.FileSystemInfoToShowProperty">
+            <summary>
+            The currently selected directory or file to display additional information about it.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.FileSystemControl.FileSystemInfoToShow">
+            <summary>
+            The currently selected directory or file to display additional information about it.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.FileSystemControl.ItemsScrollViewer">
+            <summary>
+            The ScrollViewer of the ItemsControls with the file system entries.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.FileSystemControl.ShowHiddenFilesAndDirectoriesProperty">
+            <summary>
+            Shows or hides hidden directories and files.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.FileSystemControl.ShowHiddenFilesAndDirectories">
+            <summary>
+            Shows or hides hidden directories and files.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.FileSystemControl.ShowSystemFilesAndDirectoriesProperty">
+            <summary>
+            Shows or hides protected directories and files of the system.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.FileSystemControl.ShowSystemFilesAndDirectories">
+            <summary>
+            Shows or hides protected directories and files of the system.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.FileSystemControl.SnackbarMessageQueueProperty">
+            <summary>
+            The message queue for the Snackbar. This property is intended for internal use.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.FileSystemControl.SnackbarMessageQueue">
+            <summary>
+            The message queue for the Snackbar. This property is intended for internal use.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.FileSystemControl.GetFileSystemEntryItems">
+            <summary>
+            Gets the entries of the current directory. Depending of the implementing sub class, it will contain either only directories or direcoties and files.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.FileSystemControl.UpdateListVisibility">
+            <summary>
+            Shows the list of the current directory or hides it if it is empty. A message will be show instead of an empty list.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.FileSystemDialog">
+            <summary>
+            The base class with common logic for <see cref="T:MaterialDesignExtensions.Controls.OpenDirectoryDialog" />, <see cref="T:MaterialDesignExtensions.Controls.OpenFileDialog" /> and <see cref="T:MaterialDesignExtensions.Controls.SaveFileDialog" />.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.FileSystemDialog.CurrentDirectoryProperty">
+            <summary>
+            The current directory of the dialog.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.FileSystemDialog.CurrentDirectory">
+            <summary>
+            The current directory of the dialog.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.FileSystemDialog.ShowHiddenFilesAndDirectoriesProperty">
+            <summary>
+            Shows or hides hidden directories and files.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.FileSystemDialog.ShowHiddenFilesAndDirectories">
+            <summary>
+            Shows or hides hidden directories and files.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.FileSystemDialog.ShowSystemFilesAndDirectoriesProperty">
+            <summary>
+            Shows or hides protected directories and files of the system.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.FileSystemDialog.ShowSystemFilesAndDirectories">
+            <summary>
+            Shows or hides protected directories and files of the system.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.FileSystemDialog.#ctor">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.FileSystemDialog" />.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.FileSystemDialogArguments">
+            <summary>
+            Arguments to initialize a dialog.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.FileSystemDialogArguments.Width">
+            <summary>
+            The fixed width of the dialog (nullable).
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.FileSystemDialogArguments.Height">
+            <summary>
+            The fixed heigth of the dialog (nullable).
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.FileSystemDialogArguments.CurrentDirectory">
+            <summary>
+            The current directory of the dialog.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.FileSystemDialogArguments.ShowHiddenFilesAndDirectories">
+            <summary>
+            Shows or hides hidden directories and files.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.FileSystemDialogArguments.ShowSystemFilesAndDirectories">
+            <summary>
+            Shows or hides protected directories and files of the system.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.FileSystemDialogArguments.OpenedHandler">
+            <summary>
+            Callback after openening the dialog.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.FileSystemDialogArguments.ClosingHandler">
+            <summary>
+            Callback after closing the dialog.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.FileSystemDialogArguments.#ctor">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.FileSystemDialogArguments" />.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.FileSystemDialogResult">
+            <summary>
+            Base class for the result of a dialog.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.FileSystemDialogResult.Canceled">
+            <summary>
+            true, if the dialog was canceled
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.FileSystemDialogResult.#ctor(System.Boolean)">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.FileSystemDialogResult" />.
+            </summary>
+            <param name="canceled"></param>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.IStepper">
+            <summary>
+            An interface with basic members of a stepper.
+            </summary>
+        </member>
+        <member name="E:MaterialDesignExtensions.Controls.IStepper.BackNavigation">
+            <summary>
+            An event raised by navigating to the previous <see cref="T:MaterialDesignExtensions.Model.IStep" /> in a linear order.
+            </summary>
+        </member>
+        <member name="E:MaterialDesignExtensions.Controls.IStepper.CancelNavigation">
+            <summary>
+            An event raised by cancelling the process.
+            </summary>
+        </member>
+        <member name="E:MaterialDesignExtensions.Controls.IStepper.ContinueNavigation">
+            <summary>
+            An event raised by navigating to the next <see cref="T:MaterialDesignExtensions.Model.IStep" /> in a linear order.
+            </summary>
+        </member>
+        <member name="E:MaterialDesignExtensions.Controls.IStepper.StepNavigation">
+            <summary>
+            An event raised by navigating to an arbitrary <see cref="T:MaterialDesignExtensions.Model.IStep" /> in a non-linear <see cref="T:MaterialDesignExtensions.Controls.TabControlStepper" />.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.IStepper.BackNavigationCommand">
+            <summary>
+            A command called by navigating to the previous <see cref="T:MaterialDesignExtensions.Model.IStep" /> in a linear order.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.IStepper.CancelNavigationCommand">
+            <summary>
+            A command called by cancelling the process.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.IStepper.ContentAnimationsEnabled">
+            <summary>
+            Enables the animation of the content triggered by navigation.
+            The default is true (enabled).
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.IStepper.ContinueNavigationCommand">
+            <summary>
+            A command called by navigating to the next <see cref="T:MaterialDesignExtensions.Model.IStep" /> in a linear order.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.IStepper.IsLinear">
+            <summary>
+            Enables the linear mode by disabling the buttons of the header.
+            The navigation must be accomplished by using the navigation commands.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.IStepper.Layout">
+            <summary>
+            Defines the stepper as either horizontal or vertical.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.IStepper.StepNavigationCommand">
+            <summary>
+            A command called by navigating to an arbitrary <see cref="T:MaterialDesignExtensions.Model.IStep" /> in a non-linear stepper.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.OpenDirectoryControl">
+            <summary>
+            A control for selecting a directory.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.OpenDirectoryControl.SelectDirectoryCommand">
+            <summary>
+            Internal command used by the XAML template (public to be available in the XAML template). Not intended for external usage.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.OpenDirectoryControl.DirectorySelectedEvent">
+            <summary>
+            An event raised by selecting a directory to open.
+            </summary>
+        </member>
+        <member name="E:MaterialDesignExtensions.Controls.OpenDirectoryControl.DirectorySelected">
+            <summary>
+            An event raised by selecting a directory to open.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.OpenDirectoryControl.DirectorySelectedCommandProperty">
+            <summary>
+            An command called by by selecting a directory to open.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.OpenDirectoryControl.DirectorySelectedCommand">
+            <summary>
+            An command called by by selecting a directory to open.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.OpenDirectoryControl.#ctor">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.OpenDirectoryControl" />.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.DirectorySelectedEventArgs">
+            <summary>
+            The arguments for the <see cref="E:MaterialDesignExtensions.Controls.OpenDirectoryControl.DirectorySelected" /> event.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.DirectorySelectedEventArgs.DirectoryInfo">
+            <summary>
+            The selected directory as <see cref="P:MaterialDesignExtensions.Controls.DirectorySelectedEventArgs.DirectoryInfo" />
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.DirectorySelectedEventArgs.Directory">
+            <summary>
+            The selected directory as full filename string.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.DirectorySelectedEventArgs.#ctor(System.Windows.RoutedEvent,System.Object,System.IO.DirectoryInfo)">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.DirectorySelectedEventArgs" />.
+            </summary>
+            <param name="routedEvent"></param>
+            <param name="source">The source object</param>
+            <param name="directoryInfo">The selected directory</param>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.OpenDirectoryDialog">
+            <summary>
+            A dialog for selecting a directory.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.OpenDirectoryDialog.#ctor">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.OpenDirectoryDialog" />.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.OpenDirectoryDialog.ShowDialogAsync(System.String,System.Nullable{System.Double},System.Nullable{System.Double},System.String,System.Boolean,System.Boolean,MaterialDesignThemes.Wpf.DialogOpenedEventHandler,MaterialDesignThemes.Wpf.DialogClosingEventHandler)">
+            <summary>
+            Shows a new <see cref="T:MaterialDesignExtensions.Controls.OpenDirectoryDialog" />.
+            </summary>
+            <param name="dialogHostName">The name of the <see cref="T:MaterialDesignThemes.Wpf.DialogHost" /></param>
+            <param name="width">The width of the dialog (optional)</param>
+            <param name="height">The heigth of the dialog (optional)</param>
+            <param name="currentDirectory">The current directory to show (optional)</param>
+            <param name="showHiddenFilesAndDirectories">Show or hide hidden files in the dialog (optional)</param>
+            <param name="showSystemFilesAndDirectories">Show or hide system files in the dialog (optional)</param>
+            <param name="openedHandler">Callback after openening the dialog (optional)</param>
+            <param name="closingHandler">Callback after closing the dialog (optional)</param>
+            <returns></returns>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.OpenDirectoryDialog.ShowDialogAsync(System.String,MaterialDesignExtensions.Controls.OpenDirectoryDialogArguments)">
+            <summary>
+            Shows a new <see cref="T:MaterialDesignExtensions.Controls.OpenDirectoryDialog" />.
+            </summary>
+            <param name="dialogHostName">The name of the <see cref="T:MaterialDesignThemes.Wpf.DialogHost" /></param>
+            <param name="args">The arguments for the dialog initialization</param>
+            <returns></returns>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.OpenDirectoryDialog.ShowDialogAsync(MaterialDesignThemes.Wpf.DialogHost,System.Nullable{System.Double},System.Nullable{System.Double},System.String,System.Boolean,System.Boolean,MaterialDesignThemes.Wpf.DialogOpenedEventHandler,MaterialDesignThemes.Wpf.DialogClosingEventHandler)">
+            <summary>
+            Shows a new <see cref="T:MaterialDesignExtensions.Controls.OpenDirectoryDialog" />.
+            </summary>
+            <param name="dialogHost">The <see cref="T:MaterialDesignThemes.Wpf.DialogHost" /></param>
+            <param name="width">The width of the dialog (optional)</param>
+            <param name="height">The heigth of the dialog (optional)</param>
+            <param name="currentDirectory">The current directory to show (optional)</param>
+            <param name="showHiddenFilesAndDirectories">Show or hide hidden files in the dialog (optional)</param>
+            <param name="showSystemFilesAndDirectories">Show or hide system files in the dialog (optional)</param>
+            <param name="openedHandler">Callback after openening the dialog (optional)</param>
+            <param name="closingHandler">Callback after closing the dialog (optional)</param>
+            <returns></returns>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.OpenDirectoryDialog.ShowDialogAsync(MaterialDesignThemes.Wpf.DialogHost,MaterialDesignExtensions.Controls.OpenDirectoryDialogArguments)">
+            <summary>
+            Shows a new <see cref="T:MaterialDesignExtensions.Controls.OpenDirectoryDialog" />.
+            </summary>
+            <param name="dialogHost">The <see cref="T:MaterialDesignThemes.Wpf.DialogHost" /></param>
+            <param name="args">The arguments for the dialog initialization</param>
+            <returns></returns>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.OpenDirectoryDialogArguments">
+            <summary>
+            Arguments to initialize an open directory dialog.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.OpenDirectoryDialogArguments.#ctor">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.OpenDirectoryDialogArguments" />.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.OpenDirectoryDialogResult">
+            <summary>
+            The dialog result for <see cref="T:MaterialDesignExtensions.Controls.OpenDirectoryDialog" />.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.OpenDirectoryDialogResult.DirectoryInfo">
+            <summary>
+            The selected directory as <see cref="P:MaterialDesignExtensions.Controls.OpenDirectoryDialogResult.DirectoryInfo" />.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.OpenDirectoryDialogResult.Directory">
+            <summary>
+            The selected directory as full filename string.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.OpenDirectoryDialogResult.#ctor(System.Boolean,System.IO.DirectoryInfo)">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.OpenDirectoryDialogResult" />.
+            </summary>
+            <param name="canceled">True if the dialog was canceled</param>
+            <param name="directoryInfo">The selected directory</param>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.OpenFileControl">
+            <summary>
+            A control for selecting a file to open.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.OpenFileControl.#ctor">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.OpenFileControl" />.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.OpenFileDialog">
+            <summary>
+            A dialog for selecting a file to open.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.OpenFileDialog.#ctor">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.OpenFileDialog" />.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.OpenFileDialog.ShowDialogAsync(System.String,System.Nullable{System.Double},System.Nullable{System.Double},System.String,System.Boolean,System.Boolean,MaterialDesignThemes.Wpf.DialogOpenedEventHandler,MaterialDesignThemes.Wpf.DialogClosingEventHandler)">
+            <summary>
+            Shows a new <see cref="T:MaterialDesignExtensions.Controls.OpenFileDialog" />.
+            </summary>
+            <param name="dialogHostName">The name of the <see cref="T:MaterialDesignThemes.Wpf.DialogHost" /></param>
+            <param name="width">The width of the dialog (optional)</param>
+            <param name="height">The heigth of the dialog (optional)</param>
+            <param name="currentDirectory">The current directory to show (optional)</param>
+            <param name="showHiddenFilesAndDirectories">Show or hide hidden files in the dialog (optional)</param>
+            <param name="showSystemFilesAndDirectories">Show or hide system files in the dialog (optional)</param>
+            <param name="openedHandler">Callback after openening the dialog (optional)</param>
+            <param name="closingHandler">Callback after closing the dialog (optional)</param>
+            <returns></returns>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.OpenFileDialog.ShowDialogAsync(System.String,MaterialDesignExtensions.Controls.OpenFileDialogArguments)">
+            <summary>
+            Shows a new <see cref="T:MaterialDesignExtensions.Controls.OpenFileDialog" />.
+            </summary>
+            <param name="dialogHostName">The name of the <see cref="T:MaterialDesignThemes.Wpf.DialogHost" /></param>
+            <param name="args">The arguments for the dialog initialization</param>
+            <returns></returns>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.OpenFileDialog.ShowDialogAsync(MaterialDesignThemes.Wpf.DialogHost,System.Nullable{System.Double},System.Nullable{System.Double},System.String,System.Boolean,System.Boolean,MaterialDesignThemes.Wpf.DialogOpenedEventHandler,MaterialDesignThemes.Wpf.DialogClosingEventHandler)">
+            <summary>
+            Shows a new <see cref="T:MaterialDesignExtensions.Controls.OpenFileDialog" />.
+            </summary>
+            <param name="dialogHost">The <see cref="T:MaterialDesignThemes.Wpf.DialogHost" /></param>
+            <param name="width">The width of the dialog (optional)</param>
+            <param name="height">The heigth of the dialog (optional)</param>
+            <param name="currentDirectory">The current directory to show (optional)</param>
+            <param name="showHiddenFilesAndDirectories">Show or hide hidden files in the dialog (optional)</param>
+            <param name="showSystemFilesAndDirectories">Show or hide system files in the dialog (optional)</param>
+            <param name="openedHandler">Callback after openening the dialog (optional)</param>
+            <param name="closingHandler">Callback after closing the dialog (optional)</param>
+            <returns></returns>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.OpenFileDialog.ShowDialogAsync(MaterialDesignThemes.Wpf.DialogHost,MaterialDesignExtensions.Controls.OpenFileDialogArguments)">
+            <summary>
+            Shows a new <see cref="T:MaterialDesignExtensions.Controls.OpenFileDialog" />.
+            </summary>
+            <param name="dialogHost">The <see cref="T:MaterialDesignThemes.Wpf.DialogHost" /></param>
+            <param name="args">The arguments for the dialog initialization</param>
+            <returns></returns>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.OpenFileDialogArguments">
+            <summary>
+            Arguments to initialize an open file dialog.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.OpenFileDialogArguments.#ctor">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.OpenFileDialogArguments" />.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.OpenFileDialogResult">
+            <summary>
+            The dialog result for <see cref="T:MaterialDesignExtensions.Controls.OpenFileDialog" />.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.OpenFileDialogResult.#ctor(System.Boolean,System.IO.FileInfo)">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.OpenFileDialogResult" />.
+            </summary>
+            <param name="canceled">True if the dialog was canceled</param>
+            <param name="fileInfo">The selected file</param>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.OversizedNumberSpinner">
+            <summary>
+            A spinner control for integers.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.OversizedNumberSpinner.EditValueCommand">
+            <summary>
+            Internal command used by the XAML template (public to be available in the XAML template). Not intended for external usage.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.OversizedNumberSpinner.MinusCommand">
+            <summary>
+            Internal command used by the XAML template (public to be available in the XAML template). Not intended for external usage.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.OversizedNumberSpinner.PlusCommand">
+            <summary>
+            Internal command used by the XAML template (public to be available in the XAML template). Not intended for external usage.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.PersistentSearch">
+            <summary>
+            A control which implements the persistent search of the Material design specification (https://material.io/guidelines/patterns/search.html#search-in-app-search).
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.PersistentSearch.#ctor">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.PersistentSearch" />.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.SaveFileControl">
+            <summary>
+            A control for selecting a file to save data into.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.SaveFileControl.FilenameProperty">
+            <summary>
+            The name of the file itself without the full path.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.SaveFileControl.Filename">
+            <summary>
+            The name of the file itself without the full path.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.SaveFileControl.#ctor">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.SaveFileControl" />.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.SaveFileDialog">
+            <summary>
+            A dialog for selecting a file to save data into.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.SaveFileDialog.FilenameProperty">
+            <summary>
+            The name of the file itself without the full path.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.SaveFileDialog.Filename">
+            <summary>
+            The name of the file itself without the full path.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.SaveFileDialog.#ctor">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.SaveFileDialog" />.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.SaveFileDialog.ShowDialogAsync(System.String,System.Nullable{System.Double},System.Nullable{System.Double},System.String,System.String,System.Boolean,System.Boolean,MaterialDesignThemes.Wpf.DialogOpenedEventHandler,MaterialDesignThemes.Wpf.DialogClosingEventHandler)">
+            <summary>
+            Shows a new <see cref="T:MaterialDesignExtensions.Controls.SaveFileDialog" />.
+            </summary>
+            <param name="dialogHostName">The name of the <see cref="T:MaterialDesignThemes.Wpf.DialogHost" /></param>
+            <param name="width">The width of the dialog (optional)</param>
+            <param name="height">The heigth of the dialog (optional)</param>
+            <param name="currentDirectory">The current directory to show (optional)</param>
+            <param name="filename">The name of the file without the full path (optional)</param>
+            <param name="showHiddenFilesAndDirectories">Show or hide hidden files in the dialog (optional)</param>
+            <param name="showSystemFilesAndDirectories">Show or hide system files in the dialog (optional)</param>
+            <param name="openedHandler">Callback after openening the dialog (optional)</param>
+            <param name="closingHandler">Callback after closing the dialog (optional)</param>
+            <returns></returns>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.SaveFileDialog.ShowDialogAsync(System.String,MaterialDesignExtensions.Controls.SaveFileDialogArguments)">
+            <summary>
+            Shows a new <see cref="T:MaterialDesignExtensions.Controls.SaveFileDialog" />.
+            </summary>
+            <param name="dialogHostName">The name of the <see cref="T:MaterialDesignThemes.Wpf.DialogHost" /></param>
+            <param name="args">The arguments for the dialog initialization</param>
+            <returns></returns>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.SaveFileDialog.ShowDialogAsync(MaterialDesignThemes.Wpf.DialogHost,System.Nullable{System.Double},System.Nullable{System.Double},System.String,System.String,System.Boolean,System.Boolean,MaterialDesignThemes.Wpf.DialogOpenedEventHandler,MaterialDesignThemes.Wpf.DialogClosingEventHandler)">
+            <summary>
+            Shows a new <see cref="T:MaterialDesignExtensions.Controls.SaveFileDialog" />.
+            </summary>
+            <param name="dialogHost">The <see cref="T:MaterialDesignThemes.Wpf.DialogHost" /></param>
+            <param name="width">The width of the dialog (optional)</param>
+            <param name="height">The heigth of the dialog (optional)</param>
+            <param name="currentDirectory">The current directory to show (optional)</param>
+            <param name="filename">The name of the file without the full path (optional)</param>
+            <param name="showHiddenFilesAndDirectories">Show or hide hidden files in the dialog (optional)</param>
+            <param name="showSystemFilesAndDirectories">Show or hide system files in the dialog (optional)</param>
+            <param name="openedHandler">Callback after openening the dialog (optional)</param>
+            <param name="closingHandler">Callback after closing the dialog (optional)</param>
+            <returns></returns>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.SaveFileDialog.ShowDialogAsync(MaterialDesignThemes.Wpf.DialogHost,MaterialDesignExtensions.Controls.SaveFileDialogArguments)">
+            <summary>
+            Shows a new <see cref="T:MaterialDesignExtensions.Controls.SaveFileDialog" />.
+            </summary>
+            <param name="dialogHost">The <see cref="T:MaterialDesignThemes.Wpf.DialogHost" /></param>
+            <param name="args">The arguments for the dialog initialization</param>
+            <returns></returns>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.SaveFileDialogArguments">
+            <summary>
+            Arguments to initialize a save file dialog.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.SaveFileDialogArguments.Filename">
+            <summary>
+            The name of the file itself without the full path.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.SaveFileDialogArguments.#ctor">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.SaveFileDialogArguments" />.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.SaveFileDialogResult">
+            <summary>
+            The dialog result for <see cref="T:MaterialDesignExtensions.Controls.SaveFileDialog" />.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.SaveFileDialogResult.#ctor(System.Boolean,System.IO.FileInfo)">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.SaveFileDialogResult" />.
+            </summary>
+            <param name="canceled">True if the dialog was canceled</param>
+            <param name="fileInfo">The selected file</param>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.SearchBase">
+            <summary>
+            The base control with common logic for <see cref="T:MaterialDesignExtensions.Controls.PersistentSearch" />.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.SearchBase.SelectSearchSuggestionCommand">
+            <summary>
+            Internal command used by the XAML template (public to be available in the XAML template). Not intended for external usage.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.SearchBase.SearchEvent">
+            <summary>
+            An event raised by triggering a search (select a suggestion or hit enter).
+            </summary>
+        </member>
+        <member name="E:MaterialDesignExtensions.Controls.SearchBase.Search">
+            <summary>
+            An event raised by triggering a search (select a suggestion or hit enter).
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.SearchBase.SearchCommandProperty">
+            <summary>
+            A command called if a search is triggered (select a suggestion or hit enter).
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.SearchBase.SearchCommand">
+            <summary>
+            A command called if a search is triggered (select a suggestion or hit enter).
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.SearchBase.SearchHintProperty">
+            <summary>
+            A hint to show inside the empty search text box.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.SearchBase.SearchHint">
+            <summary>
+            A hint to show inside the empty search text box.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.SearchBase.SearchIconProperty">
+            <summary>
+            The icon on the left side of the search text box.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.SearchBase.SearchIcon">
+            <summary>
+            The icon on the left side of the search text box.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.SearchBase.SearchSuggestionsSourceProperty">
+            <summary>
+            A source for providing suggestions to search for.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.SearchBase.SearchSuggestionsSource">
+            <summary>
+            A source for providing suggestions to search for.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.SearchBase.SearchTermProperty">
+            <summary>
+            The term to search for.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.SearchBase.SearchTerm">
+            <summary>
+            The term to search for.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.SearchEventArgs">
+            <summary>
+            The arguments for the <see cref="E:MaterialDesignExtensions.Controls.SearchBase.Search" /> event.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.SearchEventArgs.SearchTerm">
+            <summary>
+            The term to search for.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.SearchEventArgs.#ctor(System.Windows.RoutedEvent,System.Object,System.String)">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.SearchEventArgs" />.
+            </summary>
+            <param name="routedEvent"></param>
+            <param name="source">The source object</param>
+            <param name="searchTerm">The term to search for</param>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.SearchEventHandler">
+            <summary>
+            The delegate for handling the <see cref="E:MaterialDesignExtensions.Controls.SearchBase.Search" /> event.
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.SideNavigation">
+            <summary>
+            A control to be used as side navigation or inside a navigation drawer.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.SideNavigation.SelectNavigationItemCommand">
+            <summary>
+            Internal command used by the XAML template (public to be available in the XAML template). Not intended for external usage.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.SideNavigation.NavigationItemSelectedEvent">
+            <summary>
+            An event raised by selecting an item.
+            </summary>
+        </member>
+        <member name="E:MaterialDesignExtensions.Controls.SideNavigation.NavigationItemSelected">
+            <summary>
+            An event raised by selecting an item.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.SideNavigation.WillSelectNavigationItemEvent">
+            <summary>
+            An event raised before the item of the user selection will be assigned as <see cref="P:MaterialDesignExtensions.Controls.SideNavigation.SelectedItem" />.
+            </summary>
+        </member>
+        <member name="E:MaterialDesignExtensions.Controls.SideNavigation.WillSelectNavigationItem">
+            <summary>
+            An event raised before the item of the user selection will be assigned as <see cref="P:MaterialDesignExtensions.Controls.SideNavigation.SelectedItem" />.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.SideNavigation.NavigationItemFeedbackProperty">
+            <summary>
+            The color of the click ripple by selecting an item.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.SideNavigation.NavigationItemFeedback">
+            <summary>
+            The color of the click ripple by selecting an item.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.SideNavigation.SelectionBackgroundProperty">
+            <summary>
+            The background color of the selected item. It will get an opacity of 15%.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.SideNavigation.SelectionBackground">
+            <summary>
+            The background color of the selected item. It will get an opacity of 15%.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.SideNavigation.SelectionCornerRadiusProperty">
+            <summary>
+            The corner radius of the selected item.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.SideNavigation.SelectionCornerRadius">
+            <summary>
+            The corner radius of the selected item.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.SideNavigation.SelectionForegroundProperty">
+            <summary>
+            The foreground color of the selected item.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.SideNavigation.SelectionForeground">
+            <summary>
+            The foreground color of the selected item.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.SideNavigation.SelectionMarginProperty">
+            <summary>
+            The margin of the background of the selected item.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.SideNavigation.SelectionMargin">
+            <summary>
+            The margin of the background of the selected item.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.SideNavigation.NavigationItemSelectedCommandProperty">
+            <summary>
+            A command called if an item is selected.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.SideNavigation.NavigationItemSelectedCommand">
+            <summary>
+            A command called if an item is selected.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.SideNavigation.ItemsProperty">
+            <summary>
+            The navigation items.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.SideNavigation.Items">
+            <summary>
+            The navigation items.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.SideNavigation.SelectedItemProperty">
+            <summary>
+            The selected navigation item.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.SideNavigation.SelectedItem">
+            <summary>
+            The selected navigation item.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.SideNavigation.WillSelectNavigationItemCallbackAsync">
+            <summary>
+            A callback called after the <see cref="E:MaterialDesignExtensions.Controls.SideNavigation.WillSelectNavigationItem" /> event, because events cannot await async code.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.SideNavigation.WillSelectNavigationItemCommandProperty">
+            <summary>
+            A command called before the item of the user selection will be assigned as <see cref="P:MaterialDesignExtensions.Controls.SideNavigation.SelectedItem" />.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.SideNavigation.WillSelectNavigationItemCommand">
+            <summary>
+            A command called before the item of the user selection will be assigned as <see cref="P:MaterialDesignExtensions.Controls.SideNavigation.SelectedItem" />.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.SideNavigation.#ctor">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.SideNavigation" />.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.WillSelectNavigationItemEventArgs">
+            <summary>
+            The arguments for the <see cref="E:MaterialDesignExtensions.Controls.SideNavigation.WillSelectNavigationItem" /> event.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.WillSelectNavigationItemEventArgs.Cancel">
+            <summary>
+            Set this property to <code>true</code> for cancelling the selection of <see cref="P:MaterialDesignExtensions.Controls.WillSelectNavigationItemEventArgs.NavigationItemToSelect" />.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.WillSelectNavigationItemEventArgs.CurrentNavigationItem">
+            <summary>
+            The current item before the selection.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.WillSelectNavigationItemEventArgs.NavigationItemToSelect">
+            <summary>
+            The item to be selected.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.WillSelectNavigationItemEventArgs.#ctor(System.Windows.RoutedEvent,System.Object,MaterialDesignExtensions.Model.INavigationItem,MaterialDesignExtensions.Model.INavigationItem)">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.WillSelectNavigationItemEventArgs" />.
+            </summary>
+            <param name="routedEvent"></param>
+            <param name="source">The source object</param>
+            <param name="currentNavigationItem">The current item before the selection</param>
+            <param name="navigationToSelect">The item to be selected</param>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.WillSelectNavigationItemEventHandler">
+            <summary>
+            The delegate for handling the <see cref="E:MaterialDesignExtensions.Controls.SideNavigation.WillSelectNavigationItem" /> event.
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.WillSelectNavigationItemCallbackAsync">
+            <summary>
+            A delegate for a kind of Javascript style event handling, because events cannot await async code.
+            It will be called after the <see cref="E:MaterialDesignExtensions.Controls.SideNavigation.WillSelectNavigationItem" /> event.
+            </summary>
+            <param name="currentNavigationItem"></param>
+            <param name="navigationToSelect"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.NavigationItemSelectedEventArgs">
+            <summary>
+            The arguments for the <see cref="E:MaterialDesignExtensions.Controls.SideNavigation.NavigationItemSelected" /> event.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.NavigationItemSelectedEventArgs.NavigationItem">
+            <summary>
+            The selected item.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.NavigationItemSelectedEventArgs.#ctor(System.Windows.RoutedEvent,System.Object,MaterialDesignExtensions.Model.INavigationItem)">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.NavigationItemSelectedEventArgs" />.
+            </summary>
+            <param name="routedEvent"></param>
+            <param name="source">The source object</param>
+            <param name="navigationItem">The selected item</param>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.NavigationItemSelectedEventHandler">
+            <summary>
+            The delegate for handling the <see cref="E:MaterialDesignExtensions.Controls.SideNavigation.NavigationItemSelected" /> event.
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.StepButtonBar">
+            <summary>
+            Convenience control for the navigation buttons inside a <see cref="T:MaterialDesignExtensions.Controls.Stepper"/>.
+            Setting the content for a button will show it. Otherwise the button will be collapsed.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.StepButtonBar.BackProperty">
+            <summary>
+            The content for the back button.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.StepButtonBar.Back">
+            <summary>
+            The content for the back button.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.StepButtonBar.BackCommandProperty">
+            <summary>
+            The interal back command of the parent stepper.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.StepButtonBar.BackCommand">
+            <summary>
+            The interal back command of the parent stepper.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.StepButtonBar.CancelProperty">
+            <summary>
+            The content for the cancel button.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.StepButtonBar.Cancel">
+            <summary>
+            The content for the cancel button.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.StepButtonBar.CancelCommandProperty">
+            <summary>
+            The interal cancel command of the parent stepper.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.StepButtonBar.CancelCommand">
+            <summary>
+            The interal cancel command of the parent stepper.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.StepButtonBar.ContinueProperty">
+            <summary>
+            The content for the continue button.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.StepButtonBar.Continue">
+            <summary>
+            The content for the continue button.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.StepButtonBar.ContinueCommandProperty">
+            <summary>
+            The interal continue command of the parent stepper.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.StepButtonBar.ContinueCommand">
+            <summary>
+            The interal continue command of the parent stepper.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.StepButtonBar.IsBackEnabledProperty">
+            <summary>
+            Enables or disables the back button.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.StepButtonBar.IsBackEnabled">
+            <summary>
+            Enables or disables the back button.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.StepButtonBar.IsCancelEnabledProperty">
+            <summary>
+            Enables or disables the cancel button.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.StepButtonBar.IsCancelEnabled">
+            <summary>
+            Enables or disables the cancel button.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.StepButtonBar.IsContinueEnabledProperty">
+            <summary>
+            Enables or disables the continue button.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.StepButtonBar.IsContinueEnabled">
+            <summary>
+            Enables or disables the continue button.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.StepButtonBar.ModeProperty">
+            <summary>
+            The mode of the button bar according to <see cref="P:MaterialDesignExtensions.Controls.Stepper.Layout" />.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.StepButtonBar.Mode">
+            <summary>
+            The mode of the button bar according to <see cref="P:MaterialDesignExtensions.Controls.Stepper.Layout" />.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.Stepper">
+            <summary>
+            A control which implements the Stepper of the Material design specification (https://material.io/archive/guidelines/components/steppers.html).
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Stepper.BackCommand">
+            <summary>
+            Internal command used by the XAML template (public to be available in the XAML template). Not intended for external usage.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Stepper.CancelCommand">
+            <summary>
+            Internal command used by the XAML template (public to be available in the XAML template). Not intended for external usage.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Stepper.ContinueCommand">
+            <summary>
+            Internal command used by the XAML template (public to be available in the XAML template). Not intended for external usage.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Stepper.StepSelectedCommand">
+            <summary>
+            Internal command used by the XAML template (public to be available in the XAML template). Not intended for external usage.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Stepper.ActiveStepChangedEvent">
+            <summary>
+            An event raised by changing the active <see cref="T:MaterialDesignExtensions.Model.IStep" />.
+            </summary>
+        </member>
+        <member name="E:MaterialDesignExtensions.Controls.Stepper.ActiveStepChanged">
+            <summary>
+            An event raised by changing the active <see cref="T:MaterialDesignExtensions.Model.IStep" />.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Stepper.BackNavigationEvent">
+            <summary>
+            An event raised by navigating to the previous <see cref="T:MaterialDesignExtensions.Model.IStep" /> in a linear order.
+            </summary>
+        </member>
+        <member name="E:MaterialDesignExtensions.Controls.Stepper.BackNavigation">
+            <summary>
+            An event raised by navigating to the previous <see cref="T:MaterialDesignExtensions.Model.IStep" /> in a linear order.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Stepper.CancelNavigationEvent">
+            <summary>
+            An event raised by cancelling the process.
+            </summary>
+        </member>
+        <member name="E:MaterialDesignExtensions.Controls.Stepper.CancelNavigation">
+            <summary>
+            An event raised by cancelling the process.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Stepper.ContinueNavigationEvent">
+            <summary>
+            An event raised by navigating to the next <see cref="T:MaterialDesignExtensions.Model.IStep" /> in a linear order.
+            </summary>
+        </member>
+        <member name="E:MaterialDesignExtensions.Controls.Stepper.ContinueNavigation">
+            <summary>
+            An event raised by navigating to the next <see cref="T:MaterialDesignExtensions.Model.IStep" /> in a linear order.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Stepper.NavigationCanceledByValidationEvent">
+            <summary>
+            An event raised if the navigation was canceled because of validation errors of the current <see cref="T:MaterialDesignExtensions.Model.IStep" />.
+            </summary>
+        </member>
+        <member name="E:MaterialDesignExtensions.Controls.Stepper.NavigationCanceledByValidation">
+            <summary>
+            An event raised if the navigation was canceled because of validation errors of the current <see cref="T:MaterialDesignExtensions.Model.IStep" />.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Stepper.StepNavigationEvent">
+            <summary>
+            An event raised by navigating to an arbitrary <see cref="T:MaterialDesignExtensions.Model.IStep" /> in a non-linear <see cref="T:MaterialDesignExtensions.Controls.Stepper" />.
+            </summary>
+        </member>
+        <member name="E:MaterialDesignExtensions.Controls.Stepper.StepNavigation">
+            <summary>
+            An event raised by navigating to an arbitrary <see cref="T:MaterialDesignExtensions.Model.IStep" /> in a non-linear <see cref="T:MaterialDesignExtensions.Controls.Stepper" />.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Stepper.StepValidationEvent">
+            <summary>
+            An event raised by starting the validation of an <see cref="T:MaterialDesignExtensions.Model.IStep" />.
+            </summary>
+        </member>
+        <member name="E:MaterialDesignExtensions.Controls.Stepper.StepValidation">
+            <summary>
+            An event raised by starting the validation of an <see cref="T:MaterialDesignExtensions.Model.IStep" />.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Stepper.ActiveStepProperty">
+            <summary>
+            The active <see cref="T:MaterialDesignExtensions.Model.IStep" />.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.Stepper.ActiveStep">
+            <summary>
+            The active <see cref="T:MaterialDesignExtensions.Model.IStep" />.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Stepper.ActiveStepChangedCommandProperty">
+            <summary>
+            A command called by changing the active <see cref="T:MaterialDesignExtensions.Model.IStep" />.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.Stepper.ActiveStepChangedCommand">
+            <summary>
+            A command called by changing the active <see cref="T:MaterialDesignExtensions.Model.IStep" />.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Stepper.BackNavigationCommandProperty">
+            <summary>
+            A command called by navigating to the previous <see cref="T:MaterialDesignExtensions.Model.IStep" /> in a linear order.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.Stepper.BackNavigationCommand">
+            <summary>
+            A command called by navigating to the previous <see cref="T:MaterialDesignExtensions.Model.IStep" /> in a linear order.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Stepper.BlockNavigationOnValidationErrorsProperty">
+            <summary>
+            Specifies whether validation errors will block the navigation or not.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.Stepper.BlockNavigationOnValidationErrors">
+            <summary>
+            Specifies whether validation errors will block the navigation or not.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Stepper.CancelNavigationCommandProperty">
+            <summary>
+            A command called by cancelling the process.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.Stepper.CancelNavigationCommand">
+            <summary>
+            A command called by cancelling the process.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Stepper.ContentAnimationsEnabledProperty">
+            <summary>
+            Enables the animation of the content triggered by navigation.
+            The default is true (enabled).
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.Stepper.ContentAnimationsEnabled">
+            <summary>
+            Enables the animation of the content triggered by navigation.
+            The default is true (enabled).
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Stepper.ContinueNavigationCommandProperty">
+            <summary>
+            A command called by navigating to the next <see cref="T:MaterialDesignExtensions.Model.IStep" /> in a linear order.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.Stepper.ContinueNavigationCommand">
+            <summary>
+            A command called by navigating to the next <see cref="T:MaterialDesignExtensions.Model.IStep" /> in a linear order.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Stepper.IsLinearProperty">
+            <summary>
+            Enables the linear mode by disabling the buttons of the header.
+            The navigation must be accomplished by using the navigation commands.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.Stepper.IsLinear">
+            <summary>
+            Enables the linear mode by disabling the buttons of the header.
+            The navigation must be accomplished by using the navigation commands.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Stepper.LayoutProperty">
+            <summary>
+            Defines this <see cref="T:MaterialDesignExtensions.Controls.Stepper" /> as either horizontal or vertical.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.Stepper.Layout">
+            <summary>
+            Defines this <see cref="T:MaterialDesignExtensions.Controls.Stepper" /> as either horizontal or vertical.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Stepper.NavigationCanceledByValidationCommandProperty">
+            <summary>
+            A command called if the navigation was canceled because of validation errors of the current <see cref="T:MaterialDesignExtensions.Model.IStep" />.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.Stepper.NavigationCanceledByValidationCommand">
+            <summary>
+            A command called if the navigation was canceled because of validation errors of the current <see cref="T:MaterialDesignExtensions.Model.IStep" />.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Stepper.StepsProperty">
+            <summary>
+            Gets or sets the steps which will be shown inside this <see cref="T:MaterialDesignExtensions.Controls.Stepper" />.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.Stepper.Steps">
+            <summary>
+            Gets or sets the steps which will be shown inside this <see cref="T:MaterialDesignExtensions.Controls.Stepper" />.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Stepper.StepNavigationCommandProperty">
+            <summary>
+            A command called by navigating to an arbitrary <see cref="T:MaterialDesignExtensions.Model.IStep" /> in a non-linear <see cref="T:MaterialDesignExtensions.Controls.Stepper" />.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.Stepper.StepNavigationCommand">
+            <summary>
+            A command called by navigating to an arbitrary <see cref="T:MaterialDesignExtensions.Model.IStep" /> in a non-linear <see cref="T:MaterialDesignExtensions.Controls.Stepper" />.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.Stepper.StepValidationCommandProperty">
+            <summary>
+            A command called by starting the validation of an <see cref="T:MaterialDesignExtensions.Model.IStep" />.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.Stepper.StepValidationCommand">
+            <summary>
+            A command called by starting the validation of an <see cref="T:MaterialDesignExtensions.Model.IStep" />.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.Stepper.Controller">
+            <summary>
+            Gets the controller for this <see cref="T:MaterialDesignExtensions.Controls.Stepper" />.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.Stepper.#ctor">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.Stepper" />.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.Stepper.Continue">
+            <summary>
+            Goes to the next <see cref="T:MaterialDesignExtensions.Model.IStep"/> if the active <see cref="T:MaterialDesignExtensions.Model.IStep"/> is not the last one.
+            The behavior and validation logic will be bypassed.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.Stepper.Back">
+            <summary>
+            Goes to the previous <see cref="T:MaterialDesignExtensions.Model.IStep"/> if the active <see cref="T:MaterialDesignExtensions.Model.IStep"/> is not the first one.
+            The behavior and validation logic will be bypassed.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.Stepper.GotoStep(System.Int32)">
+            <summary>
+            Goes to the <see cref="T:MaterialDesignExtensions.Model.IStep"/> specified by the index.
+            The behavior and validation logic will be bypassed.
+            </summary>
+            <param name="index"></param>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.Stepper.GotoStep(MaterialDesignExtensions.Model.IStep)">
+            <summary>
+            Goes to the specified <see cref="T:MaterialDesignExtensions.Model.IStep"/>.
+            The behavior and validation logic will be bypassed.
+            Throws an <see cref="T:System.ArgumentNullException"/> if step is null or step is not inside this <see cref="T:MaterialDesignExtensions.Controls.Stepper"/>.
+            </summary>
+            <param name="step"></param>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.StepperLayout">
+            <summary>
+            The layout of a <see cref="T:MaterialDesignExtensions.Controls.Stepper" />.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.StepperLayout.Horizontal">
+            <summary>
+            Horizontal stepper layout
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.StepperLayout.Vertical">
+            <summary>
+            Vertical stepper layout
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.ActiveStepChangedEventArgs">
+            <summary>
+            The argument for the <see cref="E:MaterialDesignExtensions.Controls.Stepper.ActiveStepChanged" /> event and the <see cref="P:MaterialDesignExtensions.Controls.Stepper.ActiveStepChangedCommand" /> command.
+            It holds the new active <see cref="T:MaterialDesignExtensions.Model.IStep" />.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.ActiveStepChangedEventArgs.Step">
+            <summary>
+            The new active <see cref="T:MaterialDesignExtensions.Model.IStep" />.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.ActiveStepChangedEventArgs.#ctor(System.Windows.RoutedEvent,System.Object,MaterialDesignExtensions.Model.IStep)">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.ActiveStepChangedEventArgs" />.
+            </summary>
+            <param name="routedEvent"></param>
+            <param name="source"></param>
+            <param name="step"></param>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.ActiveStepChangedEventHandler">
+            <summary>
+            The delegate for handling the <see cref="E:MaterialDesignExtensions.Controls.Stepper.ActiveStepChanged" /> event.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.StepValidationEventArgs">
+            <summary>
+            The argument for the <see cref="E:MaterialDesignExtensions.Controls.Stepper.StepValidation" /> event and the <see cref="P:MaterialDesignExtensions.Controls.Stepper.StepValidationCommand" /> command.
+            It holds the <see cref="T:MaterialDesignExtensions.Model.IStep" /> to validate.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.StepValidationEventArgs.Step">
+            <summary>
+            The <see cref="T:MaterialDesignExtensions.Model.IStep" /> to validate.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.StepValidationEventArgs.#ctor(System.Windows.RoutedEvent,System.Object,MaterialDesignExtensions.Model.IStep)">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.StepValidationEventArgs" />
+            </summary>
+            <param name="routedEvent"></param>
+            <param name="source"></param>
+            <param name="step"></param>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.StepValidationEventHandler">
+            <summary>
+            The delegate for handling the <see cref="E:MaterialDesignExtensions.Controls.Stepper.StepValidation" /> event.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.StepperNavigationEventArgs">
+            <summary>
+            The argument for the <see cref="E:MaterialDesignExtensions.Controls.Stepper.BackNavigation" />, <see cref="E:MaterialDesignExtensions.Controls.Stepper.ContinueNavigation" />, <see cref="E:MaterialDesignExtensions.Controls.Stepper.StepNavigation" /> and <see cref="E:MaterialDesignExtensions.Controls.Stepper.CancelNavigation" /> event.
+            It holds the current <see cref="T:MaterialDesignExtensions.Model.IStep" /> an the one to navigate to.
+            The events are raised before the actal navigation and the navigation can be canceled by setting <see cref="E:MaterialDesignExtensions.Controls.Stepper.ContinueNavigation" /> to false.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.StepperNavigationEventArgs.CurrentStep">
+            <summary>
+            The current <see cref="T:MaterialDesignExtensions.Model.IStep" /> of the <see cref="T:MaterialDesignExtensions.Controls.Stepper" />.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.StepperNavigationEventArgs.NextStep">
+            <summary>
+            The next <see cref="T:MaterialDesignExtensions.Model.IStep" /> to navigate to.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.StepperNavigationEventArgs.Cancel">
+            <summary>
+            A flag to cancel the navigation by setting it to false.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.StepperNavigationEventArgs.#ctor(System.Windows.RoutedEvent,System.Object,MaterialDesignExtensions.Model.IStep,MaterialDesignExtensions.Model.IStep,System.Boolean)">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.StepperNavigationEventArgs" />.
+            </summary>
+            <param name="routedEvent"></param>
+            <param name="source"></param>
+            <param name="currentStep"></param>
+            <param name="nextStep"></param>
+            <param name="cancel"></param>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.StepperNavigationEventHandler">
+            <summary>
+            The delegate for handling the <see cref="E:MaterialDesignExtensions.Controls.Stepper.BackNavigation" />, <see cref="E:MaterialDesignExtensions.Controls.Stepper.ContinueNavigation" />, <see cref="E:MaterialDesignExtensions.Controls.Stepper.StepNavigation" /> and <see cref="E:MaterialDesignExtensions.Controls.Stepper.CancelNavigation" /> event.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.NavigationCanceledByValidationEventArgs">
+            <summary>
+            The argument for the <see cref="E:MaterialDesignExtensions.Controls.Stepper.NavigationCanceledByValidation" /> event and the <see cref="P:MaterialDesignExtensions.Controls.Stepper.NavigationCanceledByValidationCommand" /> command.
+            It holds the active <see cref="T:MaterialDesignExtensions.Model.IStep" /> which has validation errors.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.NavigationCanceledByValidationEventArgs.StepWithValidationErrors">
+            <summary>
+            The active <see cref="T:MaterialDesignExtensions.Model.IStep" /> which has validation errors.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.NavigationCanceledByValidationEventArgs.#ctor(System.Windows.RoutedEvent,System.Object,MaterialDesignExtensions.Model.IStep)">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.NavigationCanceledByValidationEventArgs" />.
+            </summary>
+            <param name="routedEvent"></param>
+            <param name="source"></param>
+            <param name="stepWithValidationErrors"></param>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.NavigationCanceledByValidationEventHandler">
+            <summary>
+            The delegate for handling the <see cref="E:MaterialDesignExtensions.Controls.Stepper.NavigationCanceledByValidation" /> event.
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.StepTitleHeaderControl.FirstLevelTitleProperty">
+            <summary>
+            The text of the first level title.
+            A value of null will hide this title.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.StepTitleHeaderControl.FirstLevelTitle">
+            <summary>
+            The text of the first level title.
+            A value of null will hide this title.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.StepTitleHeaderControl.SecondLevelTitleProperty">
+            <summary>
+            The text of the second level title.
+            A value of null will hide this title.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.StepTitleHeaderControl.SecondLevelTitle">
+            <summary>
+            The text of the second level title.
+            A value of null will hide this title.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.StepTitleHeaderControl.#ctor">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.StepTitleHeaderControl" />.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.TabControlAssist">
+            <summary>
+            Contains attached properties for <code>TabControl</code>.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.TabControlAssist.TabHeaderAlignmentProperty">
+            <summary>
+            The alignment of the tab headers in the <code>TabControl</code>.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.TabControlAssist.GetTabHeaderAlignment(System.Windows.DependencyObject)">
+            <summary>
+            Gets the alignment of the tab headers in the <code>TabControl</code>.
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.TabControlAssist.SetTabHeaderAlignment(System.Windows.DependencyObject,System.Windows.HorizontalAlignment)">
+            <summary>
+            Sets the alignment of the tab headers in the <code>TabControl</code>.
+            </summary>
+            <param name="element"></param>
+            <param name="value"></param>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.TabControlAssist.TabHeaderInactiveBrushProperty">
+            <summary>
+            The brush for not selected tab headers.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.TabControlAssist.GetTabHeaderInactiveBrush(System.Windows.DependencyObject)">
+            <summary>
+            Gets the brush for not selected tab headers.
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.TabControlAssist.SetTabHeaderInactiveBrush(System.Windows.DependencyObject,System.Windows.Media.Brush)">
+            <summary>
+            Sets the brush for not selected tab headers.
+            </summary>
+            <param name="element"></param>
+            <param name="value"></param>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.TabControlAssist.TabHeaderInactiveOpacityProperty">
+            <summary>
+            The opacity for not selected tab headers.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.TabControlAssist.GetTabHeaderInactiveOpacity(System.Windows.DependencyObject)">
+            <summary>
+            Gets the opacity for not selected tab headers.
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.TabControlAssist.SetTabHeaderInactiveOpacity(System.Windows.DependencyObject,System.Double)">
+            <summary>
+            Sets the ppacity for not selected tab headers.
+            </summary>
+            <param name="element"></param>
+            <param name="value"></param>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.TabControlAssist.TabHeaderHighlightBrushProperty">
+            <summary>
+            The highlight color of the selected tab item header.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.TabControlAssist.GetTabHeaderHighlightBrush(System.Windows.DependencyObject)">
+            <summary>
+            Gets the highlight color of the selected tab item header.
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.TabControlAssist.SetTabHeaderHighlightBrush(System.Windows.DependencyObject,System.Windows.Media.Brush)">
+            <summary>
+            Sets the highlight color of the selected tab item header.
+            </summary>
+            <param name="element"></param>
+            <param name="value"></param>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.TabControlAssist.TabHeaderForegroundProperty">
+            <summary>
+            The current color of the tab item header. Intended to be read-only.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.TabControlAssist.GetTabHeaderForeground(System.Windows.DependencyObject)">
+            <summary>
+            Gets the current color of the tab item header.
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.TabControlAssist.SetTabHeaderForeground(System.Windows.DependencyObject,System.Windows.Media.Brush)">
+            <summary>
+            Sets the current color of the tab item header.
+            </summary>
+            <param name="element"></param>
+            <param name="value"></param>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.TabControlStepper">
+            <summary>
+            A control which implements the Stepper of the Material design specification (https://material.io/archive/guidelines/components/steppers.html).
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.TabControlStepper.BackCommand">
+            <summary>
+            Internal command used by the XAML template (public to be available in the XAML template). Not intended for external usage.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.TabControlStepper.CancelCommand">
+            <summary>
+            Internal command used by the XAML template (public to be available in the XAML template). Not intended for external usage.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.TabControlStepper.ContinueCommand">
+            <summary>
+            Internal command used by the XAML template (public to be available in the XAML template). Not intended for external usage.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.TabControlStepper.StepSelectedCommand">
+            <summary>
+            Internal command used by the XAML template (public to be available in the XAML template). Not intended for external usage.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.TabControlStepper.BackNavigationEvent">
+            <summary>
+            An event raised by navigating to the previous <see cref="T:MaterialDesignExtensions.Model.IStep" /> in a linear order.
+            </summary>
+        </member>
+        <member name="E:MaterialDesignExtensions.Controls.TabControlStepper.BackNavigation">
+            <summary>
+            An event raised by navigating to the previous <see cref="T:MaterialDesignExtensions.Model.IStep" /> in a linear order.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.TabControlStepper.CancelNavigationEvent">
+            <summary>
+            An event raised by cancelling the process.
+            </summary>
+        </member>
+        <member name="E:MaterialDesignExtensions.Controls.TabControlStepper.CancelNavigation">
+            <summary>
+            An event raised by cancelling the process.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.TabControlStepper.ContinueNavigationEvent">
+            <summary>
+            An event raised by navigating to the next <see cref="T:MaterialDesignExtensions.Model.IStep" /> in a linear order.
+            </summary>
+        </member>
+        <member name="E:MaterialDesignExtensions.Controls.TabControlStepper.ContinueNavigation">
+            <summary>
+            An event raised by navigating to the next <see cref="T:MaterialDesignExtensions.Model.IStep" /> in a linear order.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.TabControlStepper.StepNavigationEvent">
+            <summary>
+            An event raised by navigating to an arbitrary <see cref="T:MaterialDesignExtensions.Model.IStep" /> in a non-linear <see cref="T:MaterialDesignExtensions.Controls.TabControlStepper" />.
+            </summary>
+        </member>
+        <member name="E:MaterialDesignExtensions.Controls.TabControlStepper.StepNavigation">
+            <summary>
+            An event raised by navigating to an arbitrary <see cref="T:MaterialDesignExtensions.Model.IStep" /> in a non-linear <see cref="T:MaterialDesignExtensions.Controls.TabControlStepper" />.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.TabControlStepper.BackNavigationCommandProperty">
+            <summary>
+            A command called by navigating to the previous <see cref="T:MaterialDesignExtensions.Model.IStep" /> in a linear order.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.TabControlStepper.BackNavigationCommand">
+            <summary>
+            A command called by navigating to the previous <see cref="T:MaterialDesignExtensions.Model.IStep" /> in a linear order.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.TabControlStepper.CancelNavigationCommandProperty">
+            <summary>
+            A command called by cancelling the process.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.TabControlStepper.CancelNavigationCommand">
+            <summary>
+            A command called by cancelling the process.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.TabControlStepper.ContentAnimationsEnabledProperty">
+            <summary>
+            Enables the animation of the content triggered by navigation.
+            The default is true (enabled).
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.TabControlStepper.ContentAnimationsEnabled">
+            <summary>
+            Enables the animation of the content triggered by navigation.
+            The default is true (enabled).
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.TabControlStepper.ContinueNavigationCommandProperty">
+            <summary>
+            A command called by navigating to the next <see cref="T:MaterialDesignExtensions.Model.IStep" /> in a linear order.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.TabControlStepper.ContinueNavigationCommand">
+            <summary>
+            A command called by navigating to the next <see cref="T:MaterialDesignExtensions.Model.IStep" /> in a linear order.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.TabControlStepper.IsLinearProperty">
+            <summary>
+            Enables the linear mode by disabling the buttons of the header.
+            The navigation must be accomplished by using the navigation commands.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.TabControlStepper.IsLinear">
+            <summary>
+            Enables the linear mode by disabling the buttons of the header.
+            The navigation must be accomplished by using the navigation commands.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.TabControlStepper.LayoutProperty">
+            <summary>
+            Defines this <see cref="T:MaterialDesignExtensions.Controls.TabControlStepper" /> as either horizontal or vertical.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.TabControlStepper.Layout">
+            <summary>
+            Defines this <see cref="T:MaterialDesignExtensions.Controls.TabControlStepper" /> as either horizontal or vertical.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.TabControlStepper.StepNavigationCommandProperty">
+            <summary>
+            A command called by navigating to an arbitrary <see cref="T:MaterialDesignExtensions.Model.IStep" /> in a non-linear <see cref="T:MaterialDesignExtensions.Controls.TabControlStepper" />.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.TabControlStepper.StepNavigationCommand">
+            <summary>
+            A command called by navigating to an arbitrary <see cref="T:MaterialDesignExtensions.Model.IStep" /> in a non-linear <see cref="T:MaterialDesignExtensions.Controls.TabControlStepper" />.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.TabControlStepper.Controller">
+            <summary>
+            Gets the controller for this <see cref="T:MaterialDesignExtensions.Controls.TabControlStepper" />.
+            Must to be public for the bindings.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.TabControlStepper.#ctor">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.TabControlStepper" />.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Controls.TextBoxSuggestions">
+            <summary>
+            A decorator control to add some kind of autocomplete features to a default TextBox.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.TextBoxSuggestions.SelectSuggestionItemCommand">
+            <summary>
+            Internal command used by the XAML template (public to be available in the XAML template). Not intended for external usage.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.TextBoxSuggestions.TextBoxProperty">
+            <summary>
+            The TextBox to decorate.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.TextBoxSuggestions.TextBox">
+            <summary>
+            The TextBox to decorate.
+            </summary>
+        </member>
+        <member name="F:MaterialDesignExtensions.Controls.TextBoxSuggestions.TextBoxSuggestionsSourceProperty">
+            <summary>
+            A source for providing the suggestions.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Controls.TextBoxSuggestions.TextBoxSuggestionsSource">
+            <summary>
+            A source for providing the suggestions.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Controls.TextBoxSuggestions.#ctor">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Controls.TextBoxSuggestions" />.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Converters.AsyncImageTask">
+            <summary>
+            A task to load an image asynchronously.
+            </summary>
+        </member>
+        <member name="E:MaterialDesignExtensions.Converters.AsyncImageTask.PropertyChanged">
+            <summary>
+            The property changed event.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Converters.AsyncImageTask.Image">
+            <summary>
+            The loaded image.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Converters.AsyncImageTask.#ctor(System.String,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Creates a new AsyncImageTask to load the image with the specified width and height keeping its ratio.
+            </summary>
+            <param name="imageFilename"></param>
+            <param name="targetWidth"></param>
+            <param name="targetHeight"></param>
+        </member>
+        <member name="T:MaterialDesignExtensions.Localization.Strings">
+            <summary>
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Localization.Strings.ResourceManager">
+            <summary>
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Localization.Strings.Culture">
+            <summary>
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Localization.Strings.AccessToDirectoryXDenied">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Access to folder &apos;{0}&apos; denied ähnelt.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Localization.Strings.Cancel">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Cancel ähnelt.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Localization.Strings.Close">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Close ähnelt.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Localization.Strings.Created">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Created ähnelt.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Localization.Strings.Desktop">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Desktop ähnelt.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Localization.Strings.DirectoryXNotFound">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Folder &apos;{0}&apos; not found ähnelt.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Localization.Strings.Documents">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Documents ähnelt.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Localization.Strings.Drives">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Drives ähnelt.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Localization.Strings.EmptyDirectory">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Empty folder ähnelt.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Localization.Strings.Files">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Files ähnelt.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Localization.Strings.FileSize">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die File size ähnelt.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Localization.Strings.Folders">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Folders ähnelt.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Localization.Strings.LastAccess">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Last access ähnelt.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Localization.Strings.LastModified">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Last modified ähnelt.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Localization.Strings.LocalDrive">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Local drive ähnelt.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Localization.Strings.LongPathsAreNotSupported">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Long paths are not supported ähnelt.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Localization.Strings.Music">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Music ähnelt.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Localization.Strings.Open">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Open ähnelt.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Localization.Strings.OpenFile">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Open file ähnelt.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Localization.Strings.Pictures">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Pictures ähnelt.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Localization.Strings.Save">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Save ähnelt.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Localization.Strings.SaveFile">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Save file ähnelt.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Localization.Strings.Search">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Search ähnelt.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Localization.Strings.Select">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Select ähnelt.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Localization.Strings.SelectDirectory">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Select folder ähnelt.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Localization.Strings.User">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die User ähnelt.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Localization.Strings.Videos">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Videos ähnelt.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Model.IFileFilter">
+            <summary>
+            A filter to apply to files in <see cref="T:MaterialDesignExtensions.Controls.OpenFileControl" /> and <see cref="T:MaterialDesignExtensions.Controls.SaveFileControl" />.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Model.IFileFilter.Filters">
+            <summary>
+            The orignal filter portion string according to the original .NET API.
+            (see https://docs.microsoft.com/de-de/dotnet/api/microsoft.win32.filedialog.filter?view=netframework-4.7.1#Microsoft_Win32_FileDialog_Filter)
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Model.IFileFilter.Label">
+            <summary>
+            The label of the filter to show in the user interface.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Model.IFileFilter.RegularExpressions">
+            <summary>
+            The regular expressions used by this filter for filtering files.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Model.IFileFilter.IsMatch(System.String)">
+            <summary>
+            Tests if the specified filename matches any regular expression of this filter.
+            </summary>
+            <param name="filename"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MaterialDesignExtensions.Model.IFileFilter.IsMatch(System.IO.FileInfo)">
+            <summary>
+            Tests if the filename of the specified file matches any regular expression of this filter.
+            </summary>
+            <param name="fileInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MaterialDesignExtensions.Model.FileFilter">
+            <summary>
+            An immutable filter to apply to files in <see cref="T:MaterialDesignExtensions.Controls.OpenFileControl" /> and <see cref="T:MaterialDesignExtensions.Controls.SaveFileControl" />.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Model.FileFilter.Filters">
+            <summary>
+            The orignal filter portion string according to the original .NET API.
+            (see https://docs.microsoft.com/de-de/dotnet/api/microsoft.win32.filedialog.filter?view=netframework-4.7.1#Microsoft_Win32_FileDialog_Filter)
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Model.FileFilter.Label">
+            <summary>
+            The label of the filter to show in the user interface.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Model.FileFilter.RegularExpressions">
+            <summary>
+            The regular expressions used by this filter for filtering files.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Model.FileFilter.Create(System.String,System.String)">
+            <summary>
+            Creates a new, immutable <see cref="T:MaterialDesignExtensions.Model.FileFilter" />.
+            <param name="label">The label of the filter</param>
+            <param name="filters">The filter portion string like: *.cs;*.xaml</param>
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Model.FileFilter.Create(System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new, immutable <see cref="T:MaterialDesignExtensions.Model.FileFilter" />.
+            <param name="label">The label of the filter</param>
+            <param name="filters">The filter portion string like: *.cs;*.xaml</param>
+            <param name="regularExpressions">The regular experssions to use</param>
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Model.FileFilter.IsMatch(System.String)">
+            <summary>
+            Tests if the specified filename matches any regular expression of this filter.
+            </summary>
+            <param name="filename"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MaterialDesignExtensions.Model.FileFilter.IsMatch(System.IO.FileInfo)">
+            <summary>
+            Tests if the filename of the specified file matches any regular expression of this filter.
+            </summary>
+            <param name="fileInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MaterialDesignExtensions.Model.ISearchSuggestionsSource">
+            <summary>
+            Interface for a source for providing suggestions to search for.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Model.ISearchSuggestionsSource.GetSearchSuggestions">
+            <summary>
+            Returns historical search suggestions for an empty and focused search.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MaterialDesignExtensions.Model.ISearchSuggestionsSource.GetAutoCompletion(System.String)">
+            <summary>
+            Returns suggestions based on auto-completion.
+            </summary>
+            <param name="searchTerm"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MaterialDesignExtensions.Model.SearchSuggestionsSource">
+            <summary>
+            Default implementation of <see cref="T:MaterialDesignExtensions.Model.ISearchSuggestionsSource" />.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Model.SearchSuggestionsSource.#ctor">
+            <summary>
+            Creates a new <see cref="T:MaterialDesignExtensions.Model.SearchSuggestionsSource" />.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Model.SearchSuggestionsSource.GetAutoCompletion(System.String)">
+            <summary>
+            Returns historical search suggestions for an empty and focused search.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MaterialDesignExtensions.Model.SearchSuggestionsSource.GetSearchSuggestions">
+            <summary>
+            Returns suggestions based on auto-completion.
+            </summary>
+            <param name="searchTerm"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MaterialDesignExtensions.Model.IStep">
+            <summary>
+            Represents a step inside a <see cref="!:Stepper"/>.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Model.IStep.Content">
+            <summary>
+            The content of this step.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Model.IStep.HasValidationErrors">
+            <summary>
+            True, if this step is in an invalid semantic state.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Model.IStep.Header">
+            <summary>
+            The header of this step.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Model.IStep.Validate">
+            <summary>
+            Validates this step.
+            Inherited classes may implement this method.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Model.Step">
+            <summary>
+            Basic implementation of <see cref="T:MaterialDesignExtensions.Model.IStep"/>.
+            Consider to inherit every of your steps from <see cref="T:MaterialDesignExtensions.Model.Step"/> and define a data template for them.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Model.Step.Content">
+            <summary>
+            The content of this step.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Model.Step.HasValidationErrors">
+            <summary>
+            True, if this step is in an invalid semantic state.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Model.Step.Header">
+            <summary>
+            The header of this step.
+            </summary>
+        </member>
+        <member name="M:MaterialDesignExtensions.Model.Step.Validate">
+            <summary>
+            Validates this step.
+            Inherited classes may implement this method.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Model.StepperStepViewModel">
+            <summary>
+            A view model for an <see cref="T:MaterialDesignExtensions.Model.IStep"/>.
+            It is considered for internal use only.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Model.StepTitleHeader">
+            <summary>
+            Convenience class for building a text header with a first and a second level header.
+            The corresponding data template is already implemented and will be automatically applied.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Model.StepTitleHeader.FirstLevelTitle">
+            <summary>
+            The text of the first level title.
+            A value of null will hide this title.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Model.StepTitleHeader.SecondLevelTitle">
+            <summary>
+            The text of the second level title beneath the first level title.
+            A value of null will hide the this title.
+            It uses a smaller font size.
+            </summary>
+        </member>
+        <member name="T:MaterialDesignExtensions.Properties.Resources">
+            <summary>
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Properties.Resources.ResourceManager">
+            <summary>
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:MaterialDesignExtensions.Properties.Resources.Culture">
+            <summary>
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>

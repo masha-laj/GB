@@ -1,0 +1,17 @@
+﻿<Window x:Class="Material.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Material"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="220.431" Width="187.985">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Логин" VerticalAlignment="Top"/>
+        <TextBox x:Name="loginTB" HorizontalAlignment="Left" Height="23" Margin="10,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,59,0,0" TextWrapping="Wrap" Text="Пароль" VerticalAlignment="Top"/>
+        <TextBox x:Name="passTB" HorizontalAlignment="Left" Height="23" Margin="10,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
+        <Button x:Name="loginBtn" Content="Войти" HorizontalAlignment="Left" Margin="10,108,0,0" VerticalAlignment="Top" Width="160" Click="loginBtn_Click"/>
+        <Button x:Name="regBtn" Content="Регистрация" HorizontalAlignment="Left" Margin="10,145,0,0" VerticalAlignment="Top" Width="160" Click="regBtn_Click"/>
+    </Grid>
+</Window>

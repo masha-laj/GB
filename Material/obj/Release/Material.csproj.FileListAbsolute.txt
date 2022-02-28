@@ -1,0 +1,181 @@
+C:\Users\masha\Desktop\VS\GB\Material\bin\Release\Resources\golden_bag.db
+C:\Users\masha\Desktop\VS\GB\Material\bin\Release\Material.exe.config
+C:\Users\masha\Desktop\VS\GB\Material\bin\Release\Material.exe
+C:\Users\masha\Desktop\VS\GB\Material\bin\Release\Material.pdb
+C:\Users\masha\Desktop\VS\GB\Material\bin\Release\Dragablz.dll
+C:\Users\masha\Desktop\VS\GB\Material\bin\Release\EntityFramework.dll
+C:\Users\masha\Desktop\VS\GB\Material\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\masha\Desktop\VS\GB\Material\bin\Release\MaterialDesignColors.dll
+C:\Users\masha\Desktop\VS\GB\Material\bin\Release\MaterialDesignExtensions.dll
+C:\Users\masha\Desktop\VS\GB\Material\bin\Release\MaterialDesignThemes.Wpf.dll
+C:\Users\masha\Desktop\VS\GB\Material\bin\Release\SimpleWPF.dll
+C:\Users\masha\Desktop\VS\GB\Material\bin\Release\System.Data.SQLite.dll
+C:\Users\masha\Desktop\VS\GB\Material\bin\Release\System.Data.SQLite.EF6.dll
+C:\Users\masha\Desktop\VS\GB\Material\bin\Release\System.Data.SQLite.Linq.dll
+C:\Users\masha\Desktop\VS\GB\Material\bin\Release\Dragablz.pdb
+C:\Users\masha\Desktop\VS\GB\Material\bin\Release\Dragablz.xml
+C:\Users\masha\Desktop\VS\GB\Material\bin\Release\EntityFramework.xml
+C:\Users\masha\Desktop\VS\GB\Material\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\masha\Desktop\VS\GB\Material\bin\Release\MaterialDesignColors.pdb
+C:\Users\masha\Desktop\VS\GB\Material\bin\Release\MaterialDesignExtensions.xml
+C:\Users\masha\Desktop\VS\GB\Material\bin\Release\MaterialDesignThemes.Wpf.pdb
+C:\Users\masha\Desktop\VS\GB\Material\bin\Release\MaterialDesignThemes.Wpf.xml
+C:\Users\masha\Desktop\VS\GB\Material\bin\Release\System.Data.SQLite.xml
+C:\Users\masha\Desktop\VS\GB\Material\bin\Release\System.Data.SQLite.dll.config
+C:\Users\masha\Desktop\VS\GB\Material\bin\Release\de\MaterialDesignExtensions.resources.dll
+C:\Users\masha\Desktop\VS\GB\Material\obj\Release\Components\CategoryColorSelector.baml
+C:\Users\masha\Desktop\VS\GB\Material\obj\Release\Components\CategoryIconSelector.baml
+C:\Users\masha\Desktop\VS\GB\Material\obj\Release\Components\CategoryColorSelector.g.cs
+C:\Users\masha\Desktop\VS\GB\Material\obj\Release\Components\CategoryIconSelector.g.cs
+C:\Users\masha\Desktop\VS\GB\Material\obj\Release\Components\OperationItem.g.cs
+C:\Users\masha\Desktop\VS\GB\Material\obj\Release\MainWindow.g.cs
+C:\Users\masha\Desktop\VS\GB\Material\obj\Release\Views\OperationDialog.g.cs
+C:\Users\masha\Desktop\VS\GB\Material\obj\Release\Views\CategoryDialog.g.cs
+C:\Users\masha\Desktop\VS\GB\Material\obj\Release\Views\OperationsView.g.cs
+C:\Users\masha\Desktop\VS\GB\Material\obj\Release\Views\CategoriesView.g.cs
+C:\Users\masha\Desktop\VS\GB\Material\obj\Release\App.g.cs
+C:\Users\masha\Desktop\VS\GB\Material\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\masha\Desktop\VS\GB\Material\obj\Release\Material_MarkupCompile.cache
+C:\Users\masha\Desktop\VS\GB\Material\obj\Release\Material_MarkupCompile.lref
+C:\Users\masha\Desktop\VS\GB\Material\obj\Release\App.baml
+C:\Users\masha\Desktop\VS\GB\Material\obj\Release\Components\OperationItem.baml
+C:\Users\masha\Desktop\VS\GB\Material\obj\Release\MainWindow.baml
+C:\Users\masha\Desktop\VS\GB\Material\obj\Release\Views\OperationDialog.baml
+C:\Users\masha\Desktop\VS\GB\Material\obj\Release\Views\CategoryDialog.baml
+C:\Users\masha\Desktop\VS\GB\Material\obj\Release\Views\OperationsView.baml
+C:\Users\masha\Desktop\VS\GB\Material\obj\Release\Views\CategoriesView.baml
+C:\Users\masha\Desktop\VS\GB\Material\obj\Release\Material.g.resources
+C:\Users\masha\Desktop\VS\GB\Material\obj\Release\Material.Properties.Resources.resources
+C:\Users\masha\Desktop\VS\GB\Material\obj\Release\Material.Resources.resources
+C:\Users\masha\Desktop\VS\GB\Material\obj\Release\Material.csproj.GenerateResource.cache
+C:\Users\masha\Desktop\VS\GB\Material\obj\Release\Material.csproj.CoreCompileInputs.cache
+C:\Users\masha\Desktop\VS\GB\Material\obj\Release\Material.csproj.CopyComplete
+C:\Users\masha\Desktop\VS\GB\Material\obj\Release\Material.exe
+C:\Users\masha\Desktop\VS\GB\Material\obj\Release\Material.pdb
+C:\Users\masha\Desktop\VS\GB\Material\obj\Release\Material.csprojAssemblyReference.cache
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\Resources\golden_bag.db
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\Material.exe.config
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\Material.exe
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\Material.pdb
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\Dragablz.dll
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\EntityFramework.dll
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\MaterialDesignColors.dll
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\MaterialDesignExtensions.dll
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\MaterialDesignThemes.Wpf.dll
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\SimpleWPF.dll
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\System.Data.SQLite.dll
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\System.Data.SQLite.EF6.dll
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\System.Data.SQLite.Linq.dll
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\Dragablz.pdb
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\Dragablz.xml
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\EntityFramework.xml
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\MaterialDesignColors.pdb
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\MaterialDesignExtensions.xml
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\MaterialDesignThemes.Wpf.pdb
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\MaterialDesignThemes.Wpf.xml
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\System.Data.SQLite.xml
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\System.Data.SQLite.dll.config
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\de\MaterialDesignExtensions.resources.dll
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Material.csprojAssemblyReference.cache
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Components\CategoryColorSelector.baml
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Components\CategoryIconSelector.baml
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Components\CategoryColorSelector.g.cs
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Components\CategoryIconSelector.g.cs
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Components\OperationItem.g.cs
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\MainWindow.g.cs
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Views\OperationDialog.g.cs
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Views\CategoryDialog.g.cs
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Views\OperationsView.g.cs
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Views\CategoriesView.g.cs
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\App.g.cs
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Material_MarkupCompile.cache
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Material_MarkupCompile.lref
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\App.baml
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Components\OperationItem.baml
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\MainWindow.baml
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Views\OperationDialog.baml
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Views\CategoryDialog.baml
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Views\OperationsView.baml
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Views\CategoriesView.baml
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Material.g.resources
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Material.Properties.Resources.resources
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Material.Resources.resources
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Material.csproj.GenerateResource.cache
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Material.csproj.CoreCompileInputs.cache
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Material.csproj.CopyComplete
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Material.exe
+C:\Users\shali\Desktop\Шарага\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Material.pdb
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Material.csprojAssemblyReference.cache
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Components\CategoryColorSelector.baml
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Components\CategoryIconSelector.baml
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Components\CategoryColorSelector.g.cs
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Components\CategoryIconSelector.g.cs
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Components\OperationItem.g.cs
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\MainWindow.g.cs
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Views\OperationDialog.g.cs
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Views\CategoryDialog.g.cs
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Views\OperationsView.g.cs
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Views\CategoriesView.g.cs
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\App.g.cs
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Material_MarkupCompile.cache
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Material_MarkupCompile.lref
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\Resources\golden_bag.db
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\Material.exe.config
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\Material.exe
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\Material.pdb
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\ClosedXML.dll
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\DocumentFormat.OpenXml.dll
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\Dragablz.dll
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\EntityFramework.dll
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\ExcelNumberFormat.dll
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\MaterialDesignColors.dll
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\MaterialDesignExtensions.dll
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\MaterialDesignThemes.Wpf.dll
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\SimpleWPF.dll
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\System.ComponentModel.Annotations.dll
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\System.Data.SQLite.dll
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\System.Data.SQLite.EF6.dll
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\System.Data.SQLite.Linq.dll
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\System.IO.Packaging.dll
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\ClosedXML.pdb
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\ClosedXML.xml
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\DocumentFormat.OpenXml.xml
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\Dragablz.pdb
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\Dragablz.xml
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\EntityFramework.xml
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\ExcelNumberFormat.xml
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\MaterialDesignColors.pdb
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\MaterialDesignExtensions.xml
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\MaterialDesignThemes.Wpf.pdb
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\MaterialDesignThemes.Wpf.xml
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\System.Data.SQLite.xml
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\System.Data.SQLite.dll.config
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\bin\Release\de\MaterialDesignExtensions.resources.dll
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Material.csproj.ResolveComReference.cache
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\App.baml
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Components\OperationItem.baml
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\MainWindow.baml
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Views\OperationDialog.baml
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Views\CategoryDialog.baml
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Views\OperationsView.baml
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Views\CategoriesView.baml
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Material.g.resources
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Material.Properties.Resources.resources
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Material.Resources.resources
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Material.csproj.GenerateResource.cache
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Material.csproj.CoreCompileInputs.cache
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Material.csproj.CopyComplete
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Material.exe
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\Material.pdb
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\LoginWindow.g.cs
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\LoginWindow.baml
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\RegistrationWindow.g.cs
+C:\Users\shali\Desktop\Sharaga\Практики\ПП_3курс_2семестр\Индивидуальный проект\GB\Material\obj\Release\RegistrationWindow.baml
